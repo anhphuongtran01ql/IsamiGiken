@@ -35,11 +35,18 @@ span.anticon.anticon-mail.header__icon {
 
 span.header__text {
     margin: 0;
-    padding-left: 0.5vw;
     font-size: 1vw;
     color: white;
     display: flex;
     align-items: center;
+}
+
+img.header__icon {
+    width: 3vw;
+}
+
+img.header__icon_mobile {
+    width: 10vw;
 }
 
 .ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z {
@@ -172,7 +179,6 @@ button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__row_b
 span.header__contact_text {
     font-size: 4vw;
     color: white;
-    margin-left: 0.5vw;
 }
 
 span.anticon.anticon-phone.header__contact_icon, span.anticon.anticon-mail.header__contact_icon {

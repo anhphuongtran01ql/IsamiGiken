@@ -4,8 +4,7 @@ import { Layout } from "antd";
 import "./topPage.css";
 import SliderCover from "./sliderCover";
 import FooterComponent from "../Footer/footer";
-
-const { Content } = Layout;
+import ContentComponent from "./Content/content";
 
 function TopPage() {
   return (
@@ -15,7 +14,7 @@ function TopPage() {
           <HeaderComponent />
           <SliderCover />
         </Layout>
-        <Content style={{ height: "30vh" }}>main content</Content>
+        <ContentComponent />
         <FooterComponent />
       </Layout>
     </>

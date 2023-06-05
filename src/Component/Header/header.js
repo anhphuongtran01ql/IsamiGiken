@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Col, Layout, Menu, Row } from "antd";
-import { MailOutlined } from "@ant-design/icons";
 import MobileNavbar from "./mobileNavbar";
+import logo from "../../assets/Images/common/header-logo.png";
+import mail_icon from "../../assets/Images/common/header-mail.png";
 
 const items = [
   {
@@ -53,11 +54,7 @@ function HeaderComponent() {
             md={{ span: 8 }}
             xl={{ span: 10 }}
           >
-            <img
-              className="image__logo"
-              src="https://isamigiken.gattscom.com/image/common/header-logo.png"
-              alt="功美技建"
-            />
+            <img className="image__logo" src={logo} alt="功美技建" />
           </Col>
 
           {isMobile ? (
@@ -75,7 +72,7 @@ function HeaderComponent() {
                 </Col>
                 <Col className="header__col_mail" md={{ span: 6 }}>
                   <Row className="header__row_mail">
-                    <MailOutlined className="header__icon" />
+                    <img src={mail_icon} className="header__icon" alt="mail icon"/>
                     <span className="header__text">お問い合わせはこちら</span>
                   </Row>
                 </Col>

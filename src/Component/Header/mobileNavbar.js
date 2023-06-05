@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./header.css";
 import { Button, Drawer, Menu, Row } from "antd";
-import {
-  MenuOutlined,
-  CloseOutlined,
-  PhoneOutlined,
-  MailOutlined,
-} from "@ant-design/icons";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import mail_icon from "../../assets/Images/common/header-mail.png";
+import phone_icon from "../../assets/Images/common/header-phone.png";
 
 const items = [
   {
@@ -65,11 +62,19 @@ function MobileNavbar() {
           <Menu className="header__drawer_menu" items={items} />
           <Row className="header__row_contact" style={{ width: "100%" }}>
             <Button className="header__row_button">
-              <PhoneOutlined className="header__contact_icon" />
+              <img
+                src={phone_icon}
+                className="header__icon_mobile"
+                alt="phone icon"
+              />
               <span className="header__contact_text">06-6844-7078</span>
             </Button>
             <Button className="header__row_button">
-              <MailOutlined className="header__contact_icon" />
+              <img
+                src={mail_icon}
+                className="header__icon_mobile"
+                alt="mail icon"
+              />
               <span className="header__contact_text">お問い合わせはこちら</span>
             </Button>
           </Row>

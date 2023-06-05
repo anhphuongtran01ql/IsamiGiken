@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./footer.css";
 import { Col, Layout, Row } from "antd";
+import footer_phone from "../../assets/Images/common/footer-phone.png";
+import footer_email from "../../assets/Images/common/footer-mail.png";
+import factory_name from "../../assets/Images/common/factory-name.png";
+
 const { Footer } = Layout;
 
 function FooterComponent() {
@@ -49,7 +53,7 @@ function FooterComponent() {
             <Col className="footer_col_image" md={{ span: 4 }}>
               <img
                 className="footer__icon_image"
-                src="https://isamigiken.gattscom.com/image/common/footer-phone.png"
+                src={footer_phone}
                 alt="phone icon"
               />
             </Col>
@@ -68,7 +72,7 @@ function FooterComponent() {
             <Col className="footer_col_image" md={{ span: 4 }}>
               <img
                 className="footer__icon_image"
-                src="https://isamigiken.gattscom.com/image/common/footer-mail.png"
+                src={footer_email}
                 alt="mail icon"
               />
             </Col>
@@ -81,7 +85,7 @@ function FooterComponent() {
             <Col className="footer__col_group" xs={{ span: 24 }}>
               <img
                 className="footer__image"
-                src="https://isamigiken.gattscom.com/image/common/factory-name.png"
+                src={factory_name}
                 alt="factory name"
               />
               <Row className="footer__row_text">
