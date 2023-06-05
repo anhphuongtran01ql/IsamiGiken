@@ -12,7 +12,7 @@ img.header_image {
 }
 
 /* header css */
-.ant-row.header__row.css-dev-only-do-not-override-k7429z, .ant-row.header__row_navbar.css-k7429z {
+.ant-row.header__row.css-dev-only-do-not-override-k7429z {
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -21,11 +21,15 @@ img.header_image {
 }
 
 .ant-row.header__row_navbar.css-k7429z {
-    background-color: white;
+    /* background-color: white; */
+    padding: 0 1.8vw;
 }
 
-.ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z {
+.ant-col.header__col_mail.ant-col-md-6.css-k7429z {
+    background: #004097;
+    color: white;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -74,6 +78,7 @@ ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.h
     align-items: center;
     border-radius: 5vw 0 0 5vw;
     padding: 0.8vw 0;
+    background-color: white;
 }
 
 .ant-row.header__row.css-dev-only-do-not-override-k7429z {
