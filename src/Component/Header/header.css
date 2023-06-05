@@ -1,0 +1,230 @@
+/* sliderCover css */
+img.header_image {
+    width: 100%;
+    height: 50vw;
+    max-height: 800px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.header__carousel {
+    position: relative;
+}
+
+/* header css */
+.ant-row.header__row.css-dev-only-do-not-override-k7429z {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 3vw;
+    padding: 0 1.8vw;
+}
+
+.ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z {
+    display: flex;
+    align-items: center;
+}
+
+span.anticon.anticon-mail.header__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5vw;
+}
+
+span.header__text {
+    margin: 0;
+    font-size: 1vw;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+img.header__icon {
+    width: 3vw;
+}
+
+img.header__icon_mobile {
+    width: 10vw;
+}
+
+.ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004097;
+    border-radius: 0 5vw 5vw 0;
+    padding: 0.8vw 0;
+}
+
+li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-only-child {
+    font-size: 1vw;
+    margin: 0 1.5vw;
+    padding: 0;
+}
+
+ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vw 0 0 5vw;
+    padding: 0.8vw 0;
+}
+
+.ant-row.header__row.css-dev-only-do-not-override-k7429z {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* mobileNavbar css */
+.ant-drawer-content.header__drawer {
+    background-color: #00204c;
+    color: white;
+}
+
+button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__button_menu {
+    background-color: #00204c;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 4vw;
+    right: 2vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    width: 12vw;
+    height: 9vw
+}
+
+span.anticon.anticon-close.header__icon_close {
+    background-color: #00204c;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 4vw;
+    right: 2vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    width: 12vw;
+    height: 9vw;
+    font-size: 7.5vw;
+}
+
+span.anticon.anticon-menu.header__icon_menu {
+    font-size: 7.5vw;
+}
+
+.ant-drawer-header.ant-drawer-header-close-only {
+    border-bottom: none;
+}
+
+ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.header__drawer_menu.css-dev-only-do-not-override-k7429z {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+    width: 100%;
+    background-color: #00204c;
+    color: white;
+}
+
+li.ant-menu-item.ant-menu-item-only-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4.5vw;
+
+}
+
+button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__row_button {
+    background-color: #008c99;
+    border: 0;
+    border-radius: 6.25vw;
+    text-align: center;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 1.5svw auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6vw 0;
+}
+
+.ant-row.header__row_menu.css-dev-only-do-not-override-k7429z {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+span.header__contact_text {
+    font-size: 4vw;
+    color: white;
+}
+
+span.anticon.anticon-phone.header__contact_icon, span.anticon.anticon-mail.header__contact_icon {
+    font-size: 5.5vw;
+    color: white;
+}
+
+@media (min-width: 769px) {
+
+    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
+        display: none;
+    }
+
+    .header__navbar__container {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    img.image__logo {
+        width: 18vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header__navbar__container {
+        display: none;
+    }
+
+    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
+        position: absolute;
+        right: 30px;
+    }
+
+    img.image__logo {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 992px) {
+
+    ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z {
+        padding: 0;
+    }
+
+    li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-only-child {
+        font-size: 1.08vw;
+    }
+}
