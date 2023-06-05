@@ -71,10 +71,12 @@ function HeaderComponent() {
                   />
                 </Col>
                 <Col className="header__col_mail" md={{ span: 6 }}>
-                  <Row className="header__row_mail">
-                    <img src={mail_icon} className="header__icon" alt="mail icon"/>
-                    <span className="header__text">お問い合わせはこちら</span>
-                  </Row>
+                  <img
+                    src={mail_icon}
+                    className="header__icon"
+                    alt="mail icon"
+                  />
+                  <span className="header__text">お問い合わせはこちら</span>
                 </Col>
               </Row>
             </Col>
