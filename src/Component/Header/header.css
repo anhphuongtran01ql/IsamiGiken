@@ -12,7 +12,8 @@ img.header_image {
 }
 
 /* header css */
-.ant-row.header__row.css-dev-only-do-not-override-k7429z, .ant-row.header__row.css-k7429z {
+.ant-row.header__row.css-dev-only-do-not-override-k7429z,
+.ant-row.header__row.css-k7429z {
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -47,7 +48,8 @@ img.header__icon_mobile {
     width: 10vw;
 }
 
-.ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z, .ant-col.header__col_mail.ant-col-md-6.css-k7429z {
+.ant-col.header__col_mail.ant-col-md-6.css-dev-only-do-not-override-k7429z,
+.ant-col.header__col_mail.ant-col-md-6.css-k7429z {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +65,8 @@ li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-only-child {
     padding: 0;
 }
 
-ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z, ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-k7429z {
+ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z,
+ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-k7429z {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +81,8 @@ ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.h
     color: white;
 }
 
-button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__button_menu {
+button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__button_menu,
+button.ant-btn.css-k7429z.ant-btn-default.header__button_menu {
     background-color: #00204c;
     color: white;
     cursor: pointer;
@@ -94,7 +98,8 @@ button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__butto
     box-sizing: border-box;
     padding: 0;
     width: 12vw;
-    height: 9vw
+    height: 9vw;
+    border-color: #00204c
 }
 
 span.anticon.anticon-close.header__icon_close {
@@ -125,7 +130,8 @@ span.anticon.anticon-menu.header__icon_menu {
     border-bottom: none;
 }
 
-ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.header__drawer_menu.css-dev-only-do-not-override-k7429z {
+ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.header__drawer_menu.css-dev-only-do-not-override-k7429z,
+ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-light.header__drawer_menu.css-k7429z {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +153,8 @@ li.ant-menu-item.ant-menu-item-only-child {
 
 }
 
-button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__row_button {
+button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__row_button,
+button.ant-btn.css-k7429z.ant-btn-default.header__row_button {
     background-color: #008c99;
     border: 0;
     border-radius: 6.25vw;
@@ -161,7 +168,8 @@ button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-default.header__row_b
     padding: 6vw 0;
 }
 
-.ant-row.header__row_menu.css-dev-only-do-not-override-k7429z {
+.ant-row.header__row_menu.css-dev-only-do-not-override-k7429z,
+.ant-row.header__row_menu.css-k7429z {
     position: fixed;
     top: 0;
     display: flex;
@@ -175,14 +183,16 @@ span.header__contact_text {
     color: white;
 }
 
-span.anticon.anticon-phone.header__contact_icon, span.anticon.anticon-mail.header__contact_icon {
+span.anticon.anticon-phone.header__contact_icon,
+span.anticon.anticon-mail.header__contact_icon {
     font-size: 5.5vw;
     color: white;
 }
 
 @media (min-width: 769px) {
 
-    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
+    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu,
+    button.ant-btn.css-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
         display: none;
     }
 
@@ -202,7 +212,8 @@ span.anticon.anticon-phone.header__contact_icon, span.anticon.anticon-mail.heade
         display: none;
     }
 
-    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
+    button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu,
+    button.ant-btn.css-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
         position: absolute;
         right: 30px;
     }
@@ -214,7 +225,8 @@ span.anticon.anticon-phone.header__contact_icon, span.anticon.anticon-mail.heade
 
 @media (max-width: 992px) {
 
-    ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z {
+    ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-dev-only-do-not-override-k7429z,
+    ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-light.header__menu_navbar.css-k7429z {
         padding: 0;
     }
 
