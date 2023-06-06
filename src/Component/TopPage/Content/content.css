@@ -41,13 +41,17 @@ img.slick-slide-image {
 }
 
 button.slider__button {
-    padding: 1.5vw;
+    padding: 0.5vw;
     border-radius: 50%;
     opacity: 0.5;
 }
 
 button.slider__button.button-left {
-    margin-right: 6vw;
+    margin-right: 12vw;
+}
+
+.button__slide_icon {
+    font-size: 3vw;
 }
 
 .slick-slide-info {

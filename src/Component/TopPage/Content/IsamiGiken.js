@@ -119,10 +119,10 @@ function IsamiGikenComponent() {
               className="slider__button button-left"
               onClick={handlePrevious}
             >
-              <LeftOutlined />
+              <LeftOutlined className="button__slide_icon"/>
             </button>
             <button className="slider__button" onClick={handleNext}>
-              <RightOutlined />
+              <RightOutlined className="button__slide_icon"/>
             </button>
           </div>
         </div>
