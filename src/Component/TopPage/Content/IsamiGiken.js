@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Layout, Row } from "antd";
+import { Divider, Layout } from "antd";
 import "./content.css";
 import Slider from "react-slick";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -64,23 +64,23 @@ function IsamiGikenComponent() {
 
   return (
     <Layout className="ig__container">
-      <Layout className="ig__info">
-        <Row className="ig__info_group">
-          <Row className="ig__info_title">
+      <div className="ig__info">
+        <div className="ig__info_group">
+          <div className="ig__info_title">
             <h3 className="ig__info_heading">
               IsamiGiken <span className="span__text">- 功美技建</span>
             </h3>
             <Divider className="ig__divider" />
-          </Row>
-          <Row className="ig__info_text">
+          </div>
+          <div className="ig__info_text">
             <p className="ig__info_para">
               屋根・外壁の補修・雨漏り修理リフォームのご相談ならお任せ！
             </p>
             <p className="ig__info_para">
               建築のことなら何でもご相談ください！
             </p>
-          </Row>
-        </Row>
+          </div>
+        </div>
 
         <div className="slider-wrapper">
           <div className="thumbnail-slider-wrap">
@@ -119,33 +119,34 @@ function IsamiGikenComponent() {
               className="slider__button button-left"
               onClick={handlePrevious}
             >
-              <LeftOutlined className="button__slide_icon"/>
+              <LeftOutlined className="button__slide_icon" />
             </button>
             <button className="slider__button" onClick={handleNext}>
-              <RightOutlined className="button__slide_icon"/>
+              <RightOutlined className="button__slide_icon" />
             </button>
           </div>
         </div>
-      </Layout>
+      </div>
 
-      <Row
+      <div
         className="simulation__container"
-        style={{ height: "100%", margin: "10vw 0" }}
+        style={{ height: "35vw", margin: "10vw 0" }}
       >
-        <img
-          style={{ width: "100%", position: "relative" }}
-          src={simulation_bg}
-          alt="simulation background"
-        />
-        <img
+        <div
+          className="bg__simulation"
           style={{
-            width: "50vw",
-            position: "absolute",
+            backgroundImage: `url(
+              ${simulation_bg}
+            )`,
           }}
-          src={simulation_image}
-          alt="simulation background"
-        />
-      </Row>
+        >
+          <img
+            className="img__simulation"
+            src={simulation_image}
+            alt="simulation background"
+          />
+        </div>
+      </div>
     </Layout>
   );
 }

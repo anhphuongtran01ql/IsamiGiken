@@ -1,12 +1,12 @@
 .content__container {
     height: 100%;
-    padding: 5vw 2vw;
+    width: 100%;
+    /* padding: 5vw 2vw; */
 }
 
-.content__container {
-    height: 30%;
+.ig__container {
+    padding: 5vw 0;
 }
-
 
 img.slick-slide-image {
     border-radius: 50%;
@@ -108,4 +108,30 @@ button.slider__button.button-left {
 
 .span__text {
     font-size: 2.5vw;
+}
+
+.bg__simulation {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.img__simulation {
+    width: 50vw;
+    position: absolute;
+}
+
+.info__group {
+    display: flex;
+    height: 20vw;
+    justify-content: space-between;
+}
+
+.info__group_bg {
+    width: 100%;
+    background-size: cover;
+
 }
