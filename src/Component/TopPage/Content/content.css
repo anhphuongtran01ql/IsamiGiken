@@ -70,9 +70,9 @@ button.slider__button.button-left {
     font-size: 1.5vw;
 }
 
-/* .ig__info {
-    padding: 0 5vw;
-} */
+.ig__info_title {
+    width: 100vw;
+}
 
 .ig__info_text {
     display: block;
@@ -86,6 +86,8 @@ button.slider__button.button-left {
 
 .ig__divider {
     margin: 0 0 2vw;
+    font-size: 2px;
+    background-color: #99b3d5
 }
 
 .ig__info_para {
@@ -98,4 +100,8 @@ button.slider__button.button-left {
 
 .ig__info_group {
     padding: 0 10vw 2vw;
+}
+
+.span__text {
+    font-size: 2.5vw;
 }

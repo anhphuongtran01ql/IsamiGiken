@@ -67,7 +67,9 @@ function IsamiGikenComponent() {
       <Layout className="ig__info">
         <Row className="ig__info_group">
           <Row className="ig__info_title">
-            <h3 className="ig__info_heading">IsamiGiken - 功美技建</h3>
+            <h3 className="ig__info_heading">
+              IsamiGiken <span className="span__text">- 功美技建</span>
+            </h3>
             <Divider className="ig__divider" />
           </Row>
           <Row className="ig__info_text">
