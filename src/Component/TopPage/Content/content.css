@@ -123,15 +123,3 @@ img.img__simulation {
     width: 50vw;
     position: absolute;
 }
-
-.info__group {
-    display: flex;
-    height: 20vw;
-    justify-content: space-between;
-}
-
-.info__group_bg {
-    width: 100%;
-    background-size: cover;
-
-}

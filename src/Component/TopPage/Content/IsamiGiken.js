@@ -88,6 +88,7 @@ function IsamiGikenComponent() {
               {...settingsThumbs}
               ref={(slider) => (sliderRef = slider)}
               arrows={false}
+              className="slider__group"
             >
               {slidesData.map((slide) => (
                 <div className="slick-item" key={slide.id}>
