@@ -1,6 +1,7 @@
 .info__group {
     display: flex;
     height: 25vw;
+    margin-top: 5vw;
 }
 
 .info__group_bg {

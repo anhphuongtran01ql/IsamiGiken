@@ -10,7 +10,9 @@ import slider_icon_1 from "../../../../assets/Images/top/ss_slider_icon1.png";
 import slider_icon_2 from "../../../../assets/Images/top/ss_slider_icon2.png";
 import slider_icon_3 from "../../../../assets/Images/top/ss_slider_icon3.png";
 import slider_icon_4 from "../../../../assets/Images/top/ss_slider_icon4.png";
+import renovation_bg_3 from "../../../../assets/Images/top/header-bg-3.jpg";
 import ImageComponent from "./imageComponent";
+import ImageRenovation from "./imageRenovation";
 
 const slidesData = [
   {
@@ -39,6 +41,27 @@ const slidesData = [
   },
 ];
 
+const renovations = [
+  {
+    id: 1,
+    src: renovation_bg_3,
+    label: ["該当地域", "工事概要", "施工費用"],
+    describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
+  },
+  {
+    id: 2,
+    src: renovation_bg_3,
+    label: ["該当地域", "工事概要", "施工費用"],
+    describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
+  },
+  {
+    id: 3,
+    src: renovation_bg_3,
+    label: ["該当地域", "工事概要", "施工費用"],
+    describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
+  },
+];
+
 const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -46,7 +69,16 @@ const settings = {
   infinite: true,
 };
 
-function SliderContent() {
+const settingsRenovation = {
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  dots: false,
+  infinite: true,
+};
+
+function SliderContent(props) {
+  const title = props.title;
+
   const handlePrevious = () => {
     sliderRef.slickPrev();
   };
@@ -60,16 +92,35 @@ function SliderContent() {
 
   return (
     <div className="slider-content__container">
-      <Slider
-        className="slider-content__slider"
-        {...settings}
-        ref={(slider) => (sliderRef = slider)}
-        arrows={false}
-      >
-        {slidesData.map((slide) => (
-          <ImageComponent items={slide} />
-        ))}
-      </Slider>
+      {title === "IsamiGiken" ? (
+        <>
+          <Slider
+            className="slider-content__slider"
+            {...settings}
+            ref={(slider) => (sliderRef = slider)}
+            arrows={false}
+          >
+            {slidesData.map((slide) => (
+              <ImageComponent items={slide} />
+            ))}
+          </Slider>
+        </>
+      ) : null}
+
+      {title === "Renovation" ? (
+        <>
+          <Slider
+            className="slider-content__slider"
+            {...settingsRenovation}
+            ref={(slider) => (sliderRef = slider)}
+            arrows={false}
+          >
+            {renovations.map((renovation) => (
+              <ImageRenovation renovations={renovation} />
+            ))}
+          </Slider>
+        </>
+      ) : null}
 
       <div className="slider-content__button_group">
         <button

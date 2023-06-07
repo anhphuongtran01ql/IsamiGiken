@@ -3,10 +3,12 @@ import "./imageComponent.css";
 
 function ImageComponent(props) {
   const item = props.items;
-  console.log("item", item);
   return (
     <>
-      <div className="img-component__container" key={item.id}>
+      <div
+        className="img-component__container"
+        key={item.id}
+      >
         <img
           className="img-component__image"
           src={item.src}

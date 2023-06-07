@@ -1,0 +1,40 @@
+.img-renovation__container {
+    position: relative;
+    margin-right: 0.2vw;
+}
+
+.img-renovation__image {
+    filter: brightness(0.9);
+    max-width: 100%;
+
+}
+
+.img-renovation__text-group {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    bottom: 0.3vw;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.img-renovation__heading-wrapper .img-renovation__heading {
+    font-size: 1.5vw;
+    color: white;
+    font-weight: bold;
+    margin: 1.5vw;
+    padding: 1vw;
+    background-color: #008C99;
+}
+
+.img-renovation__text-wrapper .img-renovation__text {
+    font-size: 1.5vw;
+    color: black;
+    margin: 1.5vw 0;
+    padding: 1vw;
+    font-weight: 500;
+}

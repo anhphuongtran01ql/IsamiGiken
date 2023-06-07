@@ -14,11 +14,20 @@ const igItem = {
   paragraph2: "建築のことなら何でもご相談ください！",
 };
 
+const renovation = {
+  title: "Renovation",
+  text: "施工事例",
+  paragraph1:
+    "施工事例についてのテキスト施工事例についてのテキスト施工事例についてのテキスト施",
+  paragraph2: "工事例についてのテキスト",
+};
+
 function ContentComponent() {
   return (
     <Content className="content__container">
-      <TextComponent igItem={igItem} />
+      <TextComponent item={igItem} />
       <Simulation />
+      <TextComponent item={renovation} />
       <InfoComponent />
     </Content>
   );
