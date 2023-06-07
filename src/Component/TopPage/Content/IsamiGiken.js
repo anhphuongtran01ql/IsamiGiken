@@ -70,7 +70,7 @@ function IsamiGikenComponent() {
             <h3 className="ig__info_heading">
               IsamiGiken <span className="span__text">- 功美技建</span>
             </h3>
-            <Divider className="ig__divider" />
+            {/* <Divider className="ig__divider" /> */}
           </div>
           <div className="ig__info_text">
             <p className="ig__info_para">
@@ -84,7 +84,7 @@ function IsamiGikenComponent() {
 
         <div className="slider-wrapper">
           <div className="thumbnail-slider-wrap">
-            <Slider
+            {/* <Slider
               {...settingsThumbs}
               ref={(slider) => (sliderRef = slider)}
               arrows={false}
@@ -113,7 +113,7 @@ function IsamiGikenComponent() {
                   />
                 </div>
               ))}
-            </Slider>
+            </Slider> */}
           </div>
           <div className="slider__button_group" style={{ textAlign: "center" }}>
             <button

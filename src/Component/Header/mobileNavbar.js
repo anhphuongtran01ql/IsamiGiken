@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./header.css";
+// import "./header.css";
+import "./mobileNavbar.css";
 import { Button, Drawer, Menu, Row } from "antd";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
 import mail_icon from "../../assets/Images/common/header-mail.png";

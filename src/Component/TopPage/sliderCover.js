@@ -1,5 +1,5 @@
 import React from "react";
-import "../Header/header.css";
+import "./sliderCover.css";
 
 import Slider from "react-slick";
 import header_bg_1 from "../../assets/Images/top/header-bg-1.png";
@@ -16,24 +16,26 @@ const settings = {
   slidesToScroll: 1,
 };
 
+const images = [
+  { id: 1, image: header_bg_1, text: "header background 1" },
+  { id: 2, image: header_bg_2, text: "header background 2" },
+  { id: 3, image: header_bg_3, text: "header background 3" },
+  { id: 4, image: header_bg_4, text: "header background 4" },
+  { id: 5, image: header_bg_5, text: "header background 5" },
+];
+
 function SliderCover() {
   return (
-    <Slider {...settings} arrows={false} className="header__carousel">
-      <div className="header_image-container">
-        <img className="header_image" src={header_bg_1} alt="功美技建"></img>
-      </div>
-      <div>
-        <img className="header_image" src={header_bg_2} alt="功美技建"></img>
-      </div>
-      <div>
-        <img className="header_image" src={header_bg_3} alt="功美技建"></img>
-      </div>
-      <div>
-        <img className="header_image" src={header_bg_4} alt="功美技建"></img>
-      </div>
-      <div>
-        <img className="header_image" src={header_bg_5} alt="功美技建"></img>
-      </div>
+    <Slider {...settings} className="slider-cover__slider" arrows={false}>
+      {images.map((item) => (
+        <div key={item.id} className="slider-cover__image-wrapper">
+          <img
+            className="slider-cover__image"
+            src={item.image}
+            alt={item.text}
+          />
+        </div>
+      ))}
     </Slider>
   );
 }

@@ -8,16 +8,12 @@ import ContentComponent from "./Content/content";
 
 function TopPage() {
   return (
-    <>
-      <Layout>
-        <Layout>
-          <HeaderComponent />
-          <SliderCover />
-        </Layout>
-        <ContentComponent />
-        <FooterComponent />
-      </Layout>
-    </>
+    <Layout className="top-page__container">
+      <HeaderComponent className="top-page__header" />
+      <SliderCover className="top-page__slider" />
+      {/* <ContentComponent className="top-page__content" /> */}
+      {/* <FooterComponent className="top-page__footer" /> */}
+    </Layout>
   );
 }
 

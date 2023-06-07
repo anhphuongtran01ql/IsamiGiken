@@ -4,7 +4,7 @@ import TopPage from "./Component/TopPage/topPage";
 function App() {
   return (
     <div className="App">
-      <TopPage />
+      <TopPage className="app__top-page" />
     </div>
   );
 }

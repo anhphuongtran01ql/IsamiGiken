@@ -55,8 +55,8 @@ function HeaderComponent() {
         <img className="image__logo" src={logo} alt="功美技建" />
       </Col>
 
-      {isMobile ? (
-        <MobileNavbar />
+      {/* {isMobile ? (
+        <MobileNavbar className="header__mobile-navbar" />
       ) : (
         <Col sm={{ span: 12 }} md={{ span: 16 }} xl={{ span: 14 }}>
           <Row className="header__row_navbar">
@@ -74,7 +74,7 @@ function HeaderComponent() {
             </Col>
           </Row>
         </Col>
-      )}
+      )} */}
     </Row>
   );
 }

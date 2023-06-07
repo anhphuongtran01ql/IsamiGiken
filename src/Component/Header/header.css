@@ -1,16 +1,3 @@
-/* sliderCover css */
-img.header_image {
-    width: 100%;
-    height: 50vw;
-    max-height: 800px;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.header__carousel {
-    position: relative;
-}
-
 /* header css */
 .ant-row.header__row.css-dev-only-do-not-override-k7429z,
 .ant-row.header__row.css-k7429z {
@@ -168,7 +155,7 @@ button.ant-btn.css-k7429z.ant-btn-default.header__row_button {
     padding: 6vw 0;
 }
 
-.ant-row.header__row_menu.css-dev-only-do-not-override-k7429z,
+/* .ant-row.header__row_menu.css-dev-only-do-not-override-k7429z,
 .ant-row.header__row_menu.css-k7429z {
     position: fixed;
     top: 0;
@@ -176,7 +163,7 @@ button.ant-btn.css-k7429z.ant-btn-default.header__row_button {
     justify-content: center;
     align-items: center;
     height: 100%;
-}
+} */
 
 span.header__contact_text {
     font-size: 4vw;
@@ -215,7 +202,7 @@ span.anticon.anticon-mail.header__contact_icon {
     button.ant-btn.css-dev-only-do-not-override-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu,
     button.ant-btn.css-k7429z.ant-btn-circle.ant-btn-primary.ant-btn-icon-only.header__button_menu {
         position: absolute;
-        right: 30px;
+        /* right: 30px; */
     }
 
     img.image__logo {
