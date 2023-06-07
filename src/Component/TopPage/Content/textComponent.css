@@ -1,0 +1,33 @@
+.ig__info_group {
+    padding: 0 10vw;
+}
+
+.ig__info_text {
+    display: block;
+}
+
+.ig__info_heading {
+    font-size: 5vw;
+    color: #004097;
+    margin: 0;
+}
+
+.span__text {
+    font-size: 2.5vw;
+}
+
+.ig__divider {
+    margin: 0 0 2vw;
+    font-size: 2px;
+    background-color: #99b3d5;
+    padding: 0.02vw 0;
+}
+
+.ig__info_text {
+    padding: 0 2vw 6vw 0;
+
+}
+
+.ig__info_para {
+    font-size: 1.5vw;
+}

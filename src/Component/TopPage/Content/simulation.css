@@ -1,0 +1,18 @@
+.simulation__container {
+    height: 35vw;
+    margin: 5vw 0px;
+}
+
+.simulation__background {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.simulation__image {
+    width: 50vw;
+    position: absolute;
+}

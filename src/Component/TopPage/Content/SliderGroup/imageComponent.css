@@ -1,0 +1,38 @@
+.img-component__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3vw;
+
+}
+
+.img-component__image {
+    width: 100%;
+    border-radius: 50%;
+    filter: brightness(0.7);
+}
+
+.img-component__icon-group {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.img-component__icon {
+    height: 8vw;
+}
+
+.img-component__icon-group .img-component__heading {
+    font-size: 1.5vw;
+    margin-top: 2.5vw;
+    color: white;
+    font-weight: bold;
+}
