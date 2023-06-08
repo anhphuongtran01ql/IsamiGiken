@@ -6,7 +6,7 @@ import ContentComponent from "./Content/content";
 function TopPage() {
   return (
     <div className="top-page__container">
-      <SliderCover className="top-page__slider" />
+      <SliderCover />
       <ContentComponent />
     </div>
   );
