@@ -100,8 +100,8 @@ function SliderContent(props) {
             ref={(slider) => (sliderRef = slider)}
             arrows={false}
           >
-            {slidesData.map((slide) => (
-              <ImageComponent items={slide} />
+            {slidesData.map((slide, index) => (
+              <ImageComponent items={slide} key={index} />
             ))}
           </Slider>
         </>
@@ -115,8 +115,8 @@ function SliderContent(props) {
             ref={(slider) => (sliderRef = slider)}
             arrows={false}
           >
-            {renovations.map((renovation) => (
-              <ImageRenovation renovations={renovation} />
+            {renovations.map((renovation, index) => (
+              <ImageRenovation renovations={renovation} key={index} />
             ))}
           </Slider>
         </>

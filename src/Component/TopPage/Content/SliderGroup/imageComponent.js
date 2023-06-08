@@ -5,10 +5,7 @@ function ImageComponent(props) {
   const item = props.items;
   return (
     <>
-      <div
-        className="img-component__container"
-        key={item.id}
-      >
+      <div className="img-component__container" key={item.id}>
         <img
           className="img-component__image"
           src={item.src}

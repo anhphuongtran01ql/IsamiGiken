@@ -11,13 +11,17 @@ function ImageRenovation(props) {
       />
       <div className="img-renovation__text-group">
         <div className="img-renovation__heading-wrapper">
-          {item.label.map((itemLabel) => (
-            <h2 className="img-renovation__heading">{itemLabel}</h2>
+          {item.label.map((itemLabel, index) => (
+            <h2 key={index} className="img-renovation__heading">
+              {itemLabel}
+            </h2>
           ))}
         </div>
         <div className="img-renovation__text-wrapper">
-          {item.describe.map((itemDescribe) => (
-            <p className="img-renovation__text">{itemDescribe}</p>
+          {item.describe.map((itemDescribe, index) => (
+            <p key={index} className="img-renovation__text">
+              {itemDescribe}
+            </p>
           ))}
         </div>
       </div>
