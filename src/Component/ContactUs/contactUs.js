@@ -2,6 +2,7 @@ import React from "react";
 import "./contactUs.css";
 import ImageCover from "../Header/imageCover";
 import contact_mv from "../../assets/Images/contact/contact_mv.jpg";
+import axios from "axios";
 
 import { Button, Col, Form, Input, Row } from "antd";
 
@@ -13,8 +14,17 @@ const infoHeader = {
 
 function ContactUs() {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+  const onFinish = async (values) => {
+    console.log("values: ", values);
+
+    await axios
+      .post("http://localhost:8080/contact-us", values)
+      .then((res) => {
+        console.log("res", res);
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
   };
 
   return (
@@ -57,7 +67,7 @@ function ContactUs() {
                         },
                       ]}
                     >
-                      <Input className="contact-us__input" />
+                      <Input className="contact-us__input" placeholder="name" />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -92,7 +102,10 @@ function ContactUs() {
                             },
                           ]}
                         >
-                          <Input className="contact-us__input contact-us__input_zipCode" />
+                          <Input
+                            className="contact-us__input contact-us__input_zipCode"
+                            placeholder="zip code"
+                          />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -107,7 +120,10 @@ function ContactUs() {
                             },
                           ]}
                         >
-                          <Input className="contact-us__input" />
+                          <Input
+                            className="contact-us__input"
+                            placeholder="address"
+                          />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -148,7 +164,10 @@ function ContactUs() {
                         },
                       ]}
                     >
-                      <Input className="contact-us__input" />
+                      <Input
+                        className="contact-us__input"
+                        placeholder="email"
+                      />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -181,7 +200,10 @@ function ContactUs() {
                         },
                       ]}
                     >
-                      <Input className="contact-us__input" />
+                      <Input
+                        className="contact-us__input"
+                        placeholder="phone number"
+                      />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -220,6 +242,7 @@ function ContactUs() {
                         showCount
                         maxLength={100}
                         className="contact-us__input"
+                        placeholder="inquiry content"
                       />
                     </Form.Item>
                   </Col>
