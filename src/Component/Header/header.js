@@ -4,32 +4,36 @@ import { Col, Menu, Row } from "antd";
 import MobileNavbar from "./mobileNavbar";
 import logo from "../../assets/Images/common/header-logo.png";
 import mail_icon from "../../assets/Images/common/header-mail.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const items = [
   {
     label: "ホーム",
-    key: "homepage",
+    key: "",
   },
   {
     label: "施工事例",
-    key: "constructionCase",
+    key: "renovation",
   },
   {
     label: "料金シミュレーション",
-    key: "feeSimulation",
+    key: "simulation",
   },
   {
     label: "会社概要",
-    key: "companyProfile",
+    key: "about",
   },
   {
     label: "採用情報",
-    key: "recruitmentInformation",
+    key: "recruit",
   },
 ];
 
 function HeaderComponent() {
+  const [current, setCurrent] = useState("homepage");
   const [isMobile, setIsMobile] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleResize = () => {
     if (window.innerWidth < 769) {
@@ -43,6 +47,12 @@ function HeaderComponent() {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
+
+  const onClick = (e) => {
+    console.log("click ", e);
+    setCurrent(e.key);
+    navigate(`/${e.key}`, { replace: true });
+  };
 
   return (
     <Row className="header__row">
@@ -63,14 +73,25 @@ function HeaderComponent() {
             <Col className="header__col_navbar" md={{ span: 18 }}>
               <Menu
                 className="header__menu_navbar"
-                // onClick={onClick}
+                onClick={onClick}
                 mode="horizontal"
                 items={items}
+                selectedKeys={[current]}
               />
             </Col>
+
             <Col className="header__col_mail" md={{ span: 6 }}>
-              <img src={mail_icon} className="header__icon" alt="mail icon" />
-              <span className="header__text">お問い合わせはこちら</span>
+              <Link
+                to="/contact-us"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <img src={mail_icon} className="header__icon" alt="mail icon" />
+                <span className="header__text">お問い合わせはこちら</span>
+              </Link>
             </Col>
           </Row>
         </Col>

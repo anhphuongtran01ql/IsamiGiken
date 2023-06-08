@@ -4,6 +4,7 @@ import { Col, Layout, Row } from "antd";
 import footer_phone from "../../assets/Images/common/footer-phone.png";
 import footer_email from "../../assets/Images/common/footer-mail.png";
 import factory_name from "../../assets/Images/common/factory-name.png";
+import { Link } from "react-router-dom";
 
 const { Footer } = Layout;
 
@@ -132,7 +133,14 @@ function FooterComponent() {
           ) : null}
 
           <Row className="footer__row_text">
-            <p className="footer__text_policy">プライバシーポリシー</p>
+            <Link
+              to="/private-policy"
+              style={{
+                color: "white",
+              }}
+            >
+              <p className="footer__text_policy">プライバシーポリシー</p>
+            </Link>
           </Row>
           <Row className="footer__row_text">
             <p className="footer__text_copyright">

@@ -1,0 +1,42 @@
+.policy__container {
+    background-color: #E5ECF6;
+    padding: 5vw 2.25vw;
+    margin: 0 auto;
+}
+
+.policy__container .policy__item {
+    background-color: white;
+    padding: 2vw;
+    margin: 1vw 8vw;
+}
+
+.policy__item .policy__title {
+    font-size: 1.5vw;
+    letter-spacing: 0.3vw;
+    margin-bottom: 0.7vw;
+}
+
+.policy__item .policy__content {
+    font-size: 1vw;
+    letter-spacing: 0.3vw;
+    line-height: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    .policy__container .policy__item {
+        padding: 2vw;
+        margin: 1vw 2.5vw;
+    }
+
+    .policy__item .policy__title {
+        font-size: 4.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .policy__item .policy__content {
+        font-size: 3vw;
+        letter-spacing: 0.3vw;
+        line-height: 4.5vw;
+    }
+
+}
