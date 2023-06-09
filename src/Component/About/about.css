@@ -33,6 +33,27 @@ h2.about__row_title-heading {
     line-height: 2vw;
 }
 
+.about__item_more-wrapper {
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__item_more {
+    font-size: 1.5vw;
+    margin: 0;
+    font-weight: 400;
+}
+
+.about__item_map {
+    border: 1px solid #aaa;
+}
+
+.leaflet-container a {
+    color: black;
+}
+
 @media screen and (max-width: 768px) {
     .about__row_container {
         padding: 3vw 2vw;

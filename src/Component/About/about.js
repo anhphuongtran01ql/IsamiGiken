@@ -2,7 +2,9 @@ import { Col, Row } from "antd";
 import React from "react";
 import ImageCover from "../Header/imageCover";
 import info_mv from "../../assets/Images/about/info_mv.jpg";
+
 import "./about.css";
+import Map from "./map";
 
 const infoHeader = {
   image: info_mv,
@@ -65,7 +67,7 @@ const items = [
     title: "事業内容",
     content: (
       <>
-        <p style={{margin:0}}>住宅外装工事（新築・リフォーム</p>
+        <p style={{ margin: 0 }}>住宅外装工事（新築・リフォーム</p>
         <ol>
           <li>外壁材工事</li>
           <ul>
@@ -167,6 +169,36 @@ function About() {
               </Col>
             </Row>
           ))}
+        </Col>
+      </Row>
+
+      <Row className="about__row_container">
+        <Col className="about__col_container" span={24}>
+          <Row className="about__row_title-top">
+            <Col lassName="about__col_title-top" span={24}>
+              <h2 className="about__row_title-heading">スタッフ紹介</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col span={24}>
+              <Map />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+
+      <Row className="about__row_container">
+        <Col className="about__col_container" span={24}>
+          <Row className="about__row_title-top">
+            <Col lassName="about__col_title-top" span={24}>
+              <h2 className="about__row_title-heading">スタッフ紹介</h2>
+            </Col>
+          </Row>
+          <Row className="about__item_container">
+            <Col span={24} className="about__item_more-wrapper">
+              <p className="about__item_more">準備中</p>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

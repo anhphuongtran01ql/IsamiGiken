@@ -38,3 +38,16 @@
     margin: 0;
     padding: 0 1vw;
 }
+
+@media screen and (max-width: 768px) {
+    .img-cover__text_group .img-cover__heading {
+        font-size: 7vw;
+        margin: 0 2vw;
+        font-weight: 600;
+    }
+
+    .img-cover__text_group .img-cover__text {
+        font-size: 3vw;
+        padding: 0 2vw;
+    }
+}
