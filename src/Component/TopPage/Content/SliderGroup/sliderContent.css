@@ -8,6 +8,19 @@
     justify-content: space-between;
 }
 
+.slider-content__renovation_button-mobile {
+    background-color: #004097;
+    color: white;
+    width: 100%;
+    padding: 3vw 0;
+    border-radius: 2vw;
+    font-size: 2vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* button prev and next */
 .slider-content__button_group {
     text-align: center;
@@ -29,4 +42,15 @@ button.slider-content__button.button-left {
 
 .slider-content__button_icon {
     font-size: 3vw;
+}
+
+@media screen and (max-width: 768px) {
+
+    button.slider-content__button {
+        padding: 1vw;
+    }
+
+    .slider-content__button_icon {
+        font-size: 6vw;
+    }
 }

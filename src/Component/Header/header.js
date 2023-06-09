@@ -30,7 +30,7 @@ const items = [
 ];
 
 function HeaderComponent() {
-  const [current, setCurrent] = useState("homepage");
+  const [current, setCurrent] = useState("");
   const [isMobile, setIsMobile] = useState(false);
 
   const navigate = useNavigate();

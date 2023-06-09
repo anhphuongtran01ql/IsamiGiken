@@ -13,6 +13,9 @@ import slider_icon_4 from "../../../../assets/Images/top/ss_slider_icon4.png";
 import renovation_bg_3 from "../../../../assets/Images/top/header-bg-3.jpg";
 import ImageComponent from "./imageComponent";
 import ImageRenovation from "./imageRenovation";
+import { useEffect, useState } from "react";
+import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 const slidesData = [
   {
@@ -67,6 +70,15 @@ const settings = {
   slidesToScroll: 1,
   dots: false,
   infinite: true,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 const settingsRenovation = {
@@ -78,6 +90,20 @@ const settingsRenovation = {
 
 function SliderContent(props) {
   const title = props.title;
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 769) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
 
   const handlePrevious = () => {
     sliderRef.slickPrev();
@@ -104,10 +130,21 @@ function SliderContent(props) {
               <ImageComponent items={slide} key={index} />
             ))}
           </Slider>
+          <div className="slider-content__button_group">
+            <button
+              className="slider-content__button button-left"
+              onClick={handlePrevious}
+            >
+              <LeftOutlined className="slider-content__button_icon" />
+            </button>
+            <button className="slider-content__button" onClick={handleNext}>
+              <RightOutlined className="slider-content__button_icon" />
+            </button>
+          </div>
         </>
       ) : null}
 
-      {title === "Renovation" ? (
+      {title === "Renovation" && isMobile === false && (
         <>
           <Slider
             className="slider-content__slider"
@@ -119,20 +156,27 @@ function SliderContent(props) {
               <ImageRenovation renovations={renovation} key={index} />
             ))}
           </Slider>
+          <div className="slider-content__button_group">
+            <button
+              className="slider-content__button button-left"
+              onClick={handlePrevious}
+            >
+              <LeftOutlined className="slider-content__button_icon" />
+            </button>
+            <button className="slider-content__button" onClick={handleNext}>
+              <RightOutlined className="slider-content__button_icon" />
+            </button>
+          </div>
         </>
-      ) : null}
+      )}
 
-      <div className="slider-content__button_group">
-        <button
-          className="slider-content__button button-left"
-          onClick={handlePrevious}
-        >
-          <LeftOutlined className="slider-content__button_icon" />
-        </button>
-        <button className="slider-content__button" onClick={handleNext}>
-          <RightOutlined className="slider-content__button_icon" />
-        </button>
-      </div>
+      {title === "Renovation" && isMobile === true && (
+        <Link to="/renovation">
+          <Button className="slider-content__renovation_button-mobile">
+            一覧を見る
+          </Button>
+        </Link>
+      )}
     </div>
   );
 }

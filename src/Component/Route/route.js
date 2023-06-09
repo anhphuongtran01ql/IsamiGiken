@@ -8,6 +8,7 @@ import Renovation from "../Renovation/renovation";
 import About from "../About/about";
 import Recruitment from "../Recruitment/recruitment";
 import PrivatePolicy from "../Policy/policy";
+import NewsLists from "../News/newsLists";
 const { Content } = Layout;
 
 function RouteComponent() {
@@ -21,6 +22,7 @@ function RouteComponent() {
         <Route path="/recruit" element={<Recruitment />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
         <Route path="/private-policy" element={<PrivatePolicy />}></Route>
+        <Route path="/news-lists" element={<NewsLists />}></Route>
       </Routes>
     </Content>
   );

@@ -4,6 +4,7 @@ import "./content.css";
 import InfoComponent from "./info";
 import Simulation from "./simualtion";
 import TextComponent from "./textComponent";
+import News from "./news";
 
 const { Content } = Layout;
 
@@ -29,6 +30,7 @@ function ContentComponent() {
       <Simulation />
       <TextComponent item={renovation} />
       <InfoComponent />
+      <News/>
     </Content>
   );
 }

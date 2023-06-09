@@ -34,8 +34,6 @@
     font-weight: bold;
 }
 
-/* @media (min-width: 769px) and (max-width: 1600px) {}
-
 @media (max-width: 768px) {
     .img-component__icon {
         height: 17vw;
@@ -44,7 +42,5 @@
     .img-component__icon-group .img-component__heading {
         font-size: 4.5vw;
         margin-top: 2.5vw;
-
     }
-
-} */
+}
