@@ -55,7 +55,7 @@ function MobileNavbar() {
   };
   return (
     <>
-      <Button className="header__button_menu" size="large" onClick={showDrawer}>
+      <Button className="header__button_menu" onClick={showDrawer}>
         <MenuOutlined className="header__icon_menu" />
       </Button>
 
