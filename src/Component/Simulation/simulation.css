@@ -1,0 +1,24 @@
+.simulation__wrapper {
+    background-color: #E5ECF6;
+    padding: 5vw 10vw;
+}
+
+.simulation__col_container .simulation__heading {
+    background-color: #004097;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.simulation__radio_group {
+    background-color: white;
+    padding: 3vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

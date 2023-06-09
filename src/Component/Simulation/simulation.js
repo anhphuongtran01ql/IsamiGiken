@@ -1,7 +1,9 @@
-import { Col, Row } from "antd";
+import { Col, Radio, Row } from "antd";
 import React from "react";
 import ImageCover from "../Header/imageCover";
 import simulation_top_mv from "../../assets/Images/simulation/simulation_top_mv.jpg";
+import "./simulation.css";
+import SimulationItem from "./simulationItem";
 
 const infoHeader = {
   image: simulation_top_mv,
@@ -13,16 +15,10 @@ function Simulation() {
   return (
     <div>
       <ImageCover infoHeader={infoHeader} />
-      <Row>
-        <Col>
-          <Row>
-            <Col>Title</Col>
-          </Row>
-          <Row>
-            <Col span={8}>1</Col>
-            <Col span={8}>1</Col>
-            <Col span={8}>1</Col>
-          </Row>
+      <Row className="simulation__wrapper">
+        <Col span={24} className="simulation__col_container">
+          <h3 className="simulation__heading">修正箇所はどこですか？</h3>
+          <SimulationItem />
         </Col>
       </Row>
     </div>
