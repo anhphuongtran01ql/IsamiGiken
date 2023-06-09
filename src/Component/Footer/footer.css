@@ -75,7 +75,7 @@ p.footer__text_copyright {
     font-size: 1vw;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
 
     .footer__contact_phone {
 
@@ -105,7 +105,7 @@ p.footer__text_copyright {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
     footer.footer {
         padding: 0;

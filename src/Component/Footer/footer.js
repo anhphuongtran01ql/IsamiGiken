@@ -12,7 +12,7 @@ function FooterComponent() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 992) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -26,7 +26,7 @@ function FooterComponent() {
   return (
     <Footer className="footer">
       <Row className="footer__contact">
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={24} md={24} lg={12}>
           <Row className="footer__contact_phone">
             <Col className="footer__col" md={{ span: 20 }}>
               <Row className="footer__row">
@@ -58,7 +58,7 @@ function FooterComponent() {
             </Col>
           </Row>
         </Col>
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={24} md={24} lg={12}>
           <Row className="footer__contact_email">
             <Col className="footer__col" md={{ span: 20 }}>
               <Row className="footer__row">
@@ -79,7 +79,7 @@ function FooterComponent() {
         </Col>
       </Row>
       <Row className="footer__info">
-        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+        <Col xs={24} md={24} lg={12}>
           <Row className="footer__row_text">
             <Col className="footer__col_group" xs={{ span: 24 }}>
               <img
