@@ -25,11 +25,13 @@ h3.footer__heading {
     margin: 0;
     font-size: 3vw;
     line-height: 3.75vw;
+    color: white;
 }
 
 p.footer__text {
     margin: 0;
     font-size: 1vw;
+    color: white;
 }
 
 .footer_col_image {
@@ -48,11 +50,13 @@ p.footer__text {
     justify-content: center;
     align-items: center;
     margin-bottom: 3vw;
+
 }
 
 .footer__row_text {
     display: flex;
     flex-direction: column;
+
 }
 
 img.footer__image {
@@ -69,10 +73,12 @@ a.footer__navbar_item {
     display: flex;
     gap: 1.2vw;
     margin-bottom: 1.2vw;
+    color: white;
 }
 
 p.footer__text_copyright {
     font-size: 1vw;
+    color: white;
 }
 
 @media (min-width: 992px) {
@@ -98,6 +104,7 @@ p.footer__text_copyright {
 
     p.footer__text_policy {
         margin-bottom: 4vw;
+        color: white;
     }
 
     p.footer__text_copyright {
@@ -144,6 +151,7 @@ p.footer__text_copyright {
         margin: 2vw 0 3.5vw;
         text-decoration: underline;
         font-size: 2.5vw;
+        color: white;
     }
 
     p.footer__text_copyright {

@@ -1,41 +1,69 @@
-.policy__container {
-    padding: 5vw 2.25vw;
+.privacy_policy {
+    font-family: 'Times New Roman';
+    max-width: 75vw;
     margin: 0 auto;
 }
 
-.policy__container .policy__item {
-    background-color: white;
+.privacy_policy dl {
     padding: 2vw;
-    margin: 1vw 8vw;
+    margin: 0 0 1vw 0;
+    background-color: #fff;
 }
 
-.policy__item .policy__title {
+.privacy_policy dl dt {
     font-size: 1.5vw;
-    letter-spacing: 0.3vw;
+    font-weight: 300;
     margin-bottom: 0.7vw;
+
 }
 
-.policy__item .policy__content {
+.privacy_policy dd, .privacy_policy ol>li {
     font-size: 1vw;
-    letter-spacing: 0.3vw;
-    line-height: 1.5vw;
+    font-weight: 300;
+    line-height: 2;
+    color: #000;
+    margin: 0;
+}
+
+.privacy_policy dl dd ol {
+    padding-left: 1.5vw;
+}
+
+.privacy_policy p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .privacy_policy dl {
+        padding: 2vw;
+        margin: 0 0 1vw 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .policy__container .policy__item {
-        padding: 2vw;
-        margin: 1vw 2.5vw;
+    .privacy_policy {
+        max-width: 100%;
+        margin: 0;
     }
 
-    .policy__item .policy__title {
-        font-size: 4.5vw;
+    .privacy_policy dl {
+        padding: 3vw;
         margin-bottom: 2vw;
     }
 
-    .policy__item .policy__content {
-        font-size: 3vw;
-        letter-spacing: 0.3vw;
-        line-height: 4.5vw;
+    .privacy_policy dl dt {
+        font-size: 4.5vw;
+        margin-bottom: 0.7vw;
     }
 
+    .privacy_policy dd, .privacy_policy ol>li {
+        font-size: 3vw;
+        line-height: 2;
+    }
+
+    .privacy_policy dl dd ol {
+        margin: 0;
+        padding-left: 5vw;
+    }
 }

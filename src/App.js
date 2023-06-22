@@ -9,7 +9,9 @@ function App() {
       <header>
         <HeaderComponent className="top-page__header" />
       </header>
-      <RouteComponent />
+      <main>
+        <RouteComponent />
+      </main>
       <FooterComponent className="top-page__footer" />
     </div>
   );

@@ -14,18 +14,16 @@ const { Content } = Layout;
 
 function RouteComponent() {
   return (
-    <Content>
-      <Routes>
-        <Route path="/" element={<TopPage />}></Route>
-        <Route path="/renovation" element={<Renovation />}></Route>
-        <Route path="/simulation" element={<Simulation />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/recruit" element={<Recruitment />}></Route>
-        <Route path="/contact-us" element={<ContactUs />}></Route>
-        <Route path="/private-policy" element={<PrivatePolicy />}></Route>
-        <Route path="/news-lists" element={<NewsLists />}></Route>
-      </Routes>
-    </Content>
+    <Routes>
+      <Route path="/" element={<TopPage />}></Route>
+      <Route path="/renovation" element={<Renovation />}></Route>
+      <Route path="/simulation" element={<Simulation />}></Route>
+      <Route path="/about" element={<About />}></Route>
+      <Route path="/recruit" element={<Recruitment />}></Route>
+      <Route path="/contact-us" element={<ContactUs />}></Route>
+      <Route path="/private-policy" element={<PrivatePolicy />}></Route>
+      <Route path="/news-lists" element={<NewsLists />}></Route>
+    </Routes>
   );
 }
 
