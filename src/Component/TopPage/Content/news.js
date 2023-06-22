@@ -53,7 +53,7 @@ function News() {
   // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
 
   return (
     <div>

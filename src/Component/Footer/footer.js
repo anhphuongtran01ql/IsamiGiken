@@ -22,7 +22,7 @@ function FooterComponent() {
   // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
   return (
     <Footer className="footer">
       <Row className="footer__contact">

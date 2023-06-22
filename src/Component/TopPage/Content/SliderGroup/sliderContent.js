@@ -103,7 +103,7 @@ function SliderContent(props) {
   // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
 
   const handlePrevious = () => {
     sliderRef.slickPrev();

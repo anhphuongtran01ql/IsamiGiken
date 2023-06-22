@@ -1,12 +1,9 @@
 import React from "react";
-import { Layout } from "antd";
 import "./content.css";
 import InfoComponent from "./info";
 import Simulation from "./simualtion";
 import TextComponent from "./textComponent";
 import News from "./news";
-
-const { Content } = Layout;
 
 const igItem = {
   title: "IsamiGiken",
@@ -25,13 +22,13 @@ const renovation = {
 
 function ContentComponent() {
   return (
-    <Content className="content__container">
+    <div className="content__container">
       <TextComponent item={igItem} />
       <Simulation />
       <TextComponent item={renovation} />
       <InfoComponent />
       <News/>
-    </Content>
+    </div>
   );
 }
 

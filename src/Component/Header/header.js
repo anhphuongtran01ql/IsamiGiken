@@ -46,7 +46,7 @@ function HeaderComponent() {
   // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
 
   const onClick = (e) => {
     console.log("click ", e);
