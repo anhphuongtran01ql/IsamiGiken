@@ -1,5 +1,4 @@
 .about__row_container {
-    background-color: #E5ECF6;
     padding: 5vw 10vw;
 }
 
@@ -7,7 +6,7 @@ h2.about__row_title-heading {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #004097;
+    background-color: var(--primary-color);
     color: white;
     padding: 1vw 0;
     font-size: 1.5vw;

@@ -53,7 +53,7 @@ img.header__icon_mobile {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #004097;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 0 5vw 5vw 0;
     padding: 0.8vw 0;
@@ -76,12 +76,12 @@ li.ant-menu-overflow-item.ant-menu-item.ant-menu-item-only-child {
 
 /* mobileNavbar css */
 .ant-drawer-content.header__drawer {
-    background-color: #00204c;
+    background-color: var(--secondary-color);
     color: white;
 }
 
 button.header__button_menu {
-    background-color: #00204c;
+    background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
     position: fixed;
@@ -97,11 +97,11 @@ button.header__button_menu {
     padding: 0;
     width: 12vw;
     height: 9vw;
-    border-color: #00204c
+    border-color: var(--secondary-color)
 }
 
 span.anticon.anticon-close.header__icon_close {
-    background-color: #00204c;
+    background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
     position: fixed;
@@ -135,7 +135,7 @@ span.anticon.anticon-menu.header__icon_menu {
     align-items: center;
     height: 55%;
     width: 100%;
-    background-color: #00204c;
+    background-color: var(--secondary-color);
     color: white;
 }
 

@@ -1,10 +1,9 @@
 .simulation__wrapper {
-    background-color: #E5ECF6;
     padding: 5vw 10vw;
 }
 
 .simulation__col_container .simulation__heading {
-    background-color: #004097;
+    background-color: var(--primary-color);
     padding: 2vw;
     display: flex;
     justify-content: center;

@@ -8,7 +8,7 @@
 
 .ig__info_heading {
     font-size: 5vw;
-    color: #004097;
+    color: var(--primary-color);
     margin: 0;
 }
 

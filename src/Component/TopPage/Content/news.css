@@ -27,17 +27,17 @@
 .news__text-group h3.news__heading {
     font-size: 4vw;
     margin-bottom: 1vw;
-    color: #00204C;
+    color: var(--secondary-color);
 }
 
 .news__text-group p.news__text {
     font-size: 2vw;
-    color: #00204C;
+    color: var(--secondary-color);
     letter-spacing: 0.1vw;
 }
 
 button.news__button, .news__button_mobile {
-    background-color: #00204C;
+    background-color: var(--secondary-color);
     color: white;
     border-radius: 6vw;
     padding: 1.5vw 2.5vw;

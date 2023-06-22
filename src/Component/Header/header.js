@@ -62,7 +62,9 @@ function HeaderComponent() {
         md={{ span: 8 }}
         xl={{ span: 10 }}
       >
-        <img className="image__logo" src={logo} alt="功美技建" />
+        <Link to="/">
+          <img className="image__logo" src={logo} alt="功美技建" />
+        </Link>
       </Col>
 
       {isMobile ? (

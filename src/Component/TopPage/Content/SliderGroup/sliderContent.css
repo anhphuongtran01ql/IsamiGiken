@@ -9,7 +9,7 @@
 }
 
 .slider-content__renovation_button-mobile {
-    background-color: #004097;
+    background-color: var(--primary-color);
     color: white;
     width: 100%;
     padding: 3vw 0;
