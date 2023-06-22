@@ -9,6 +9,7 @@ import About from "../About/about";
 import Recruitment from "../Recruitment/recruitment";
 import PrivatePolicy from "../Policy/policy";
 import NewsLists from "../News/newsLists";
+
 const { Content } = Layout;
 
 function RouteComponent() {

@@ -92,17 +92,23 @@ function SliderContent(props) {
   const title = props.title;
   const [isMobile, setIsMobile] = useState(false);
 
-  const handleResize = () => {
-    if (window.innerWidth < 769) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
   // create an event listener
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 769) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handlePrevious = () => {
