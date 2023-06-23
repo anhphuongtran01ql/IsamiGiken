@@ -1,15 +1,12 @@
-import { Col, Row } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import news_mv from "../../assets/Images/news/news_mv.jpg";
-import { Link, useNavigate } from "react-router-dom";
 import "./newsLists.css";
-import { handleClickToTop } from "../ScrollToTop/ScrollToTop";
 
 const infoHeader = {
   image: news_mv,
   title: "News Lists",
-  subTitle: "採用情報",
+  subTitle: "お知らせ",
 };
 
 const items = [
@@ -27,25 +24,24 @@ const items = [
 ];
 
 function NewsLists() {
-  const navigate = useNavigate();
-  const redirectHome = handleClickToTop(navigate, "/");
+  useEffect(() => {
+    document.title = "お知らせ一覧｜功美技建";
+  }, []);
 
   return (
-    <div>
+    <>
       <ImageCover infoHeader={infoHeader} />
-      <div className="news-lists__container">
-        {items.map((item, index) => (
-          <Row key={index}>
-            <Col span={24} className="news-lists__span_group">
-              <p className="news-lists__span_date">{item.date}</p>
-              <Link onClick={redirectHome} style={{ color: "black" }}>
-                <p className="new-lists__span_text">{item.text}</p>
-              </Link>
-            </Col>
-          </Row>
-        ))}
-      </div>
-    </div>
+      <section className="news__lists container">
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>
+              <time>{item.date}</time>
+              <a href="/">{item.text}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }
 

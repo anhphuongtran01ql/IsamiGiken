@@ -1,22 +1,22 @@
-.privacy_policy {
+.privacy__policy {
     max-width: 75vw;
     margin: 0 auto;
 }
 
-.privacy_policy dl {
+.privacy__policy dl {
     padding: 2vw;
     margin: 0 0 1vw 0;
     background-color: #fff;
 
 }
 
-.privacy_policy dl dt {
+.privacy__policy dl dt {
     font-size: 1.5vw;
     margin-bottom: 0.7vw;
     font-weight: 400;
 }
 
-.privacy_policy dd, .privacy_policy ol>li {
+.privacy__policy dd, .privacy__policy ol>li {
     font-size: 1vw;
     line-height: 2;
     color: #000;
@@ -24,11 +24,11 @@
     font-weight: 400;
 }
 
-.privacy_policy dl dd ol {
+.privacy__policy dl dd ol {
     padding-left: 1.5vw;
 }
 
-.privacy_policy p {
+.privacy__policy p {
     margin: 0;
 }
 
@@ -48,34 +48,34 @@
 
 
 @media screen and (max-width: 1600px) {
-    .privacy_policy dl {
+    .privacy__policy dl {
         padding: 2vw;
         margin: 0 0 1vw 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .privacy_policy {
+    .privacy__policy {
         max-width: 100%;
         margin: 0;
     }
 
-    .privacy_policy dl {
+    .privacy__policy dl {
         padding: 3vw;
         margin-bottom: 2vw;
     }
 
-    .privacy_policy dl dt {
+    .privacy__policy dl dt {
         font-size: 4.5vw;
         margin-bottom: 0.7vw;
     }
 
-    .privacy_policy dd, .privacy_policy ol>li {
+    .privacy__policy dd, .privacy__policy ol>li {
         font-size: 3vw;
         line-height: 2;
     }
 
-    .privacy_policy dl dd ol {
+    .privacy__policy dl dd ol {
         margin: 0;
         padding-left: 5vw;
     }

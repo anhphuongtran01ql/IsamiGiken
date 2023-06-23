@@ -174,7 +174,7 @@ function PrivatePolicy() {
   return (
     <>
       <ImageCover infoHeader={infoHeader} />
-      <section className="privacy_policy container">
+      <section className="privacy__policy container">
         {items.map((item, index) => (
           <dl key={index}>
             <dt>{item.title}</dt>
