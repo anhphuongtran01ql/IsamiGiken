@@ -15,7 +15,8 @@ import ImageComponent from "./imageComponent";
 import ImageRenovation from "./imageRenovation";
 import { useEffect, useState } from "react";
 import { Button } from "antd";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { handleClickToTop } from "../../../ScrollToTop/ScrollToTop";
 
 const slidesData = [
   {
@@ -91,6 +92,8 @@ const settingsRenovation = {
 function SliderContent(props) {
   const title = props.title;
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
+  const redirectRenovation = handleClickToTop(navigate, "/renovation");
 
   // create an event listener
   useEffect(() => {
@@ -177,11 +180,12 @@ function SliderContent(props) {
       )}
 
       {title === "Renovation" && isMobile === true && (
-        <Link to="/renovation">
-          <Button className="slider-content__renovation_button-mobile">
-            一覧を見る
-          </Button>
-        </Link>
+        <Button
+          className="slider-content__renovation_button-mobile"
+          onClick={redirectRenovation}
+        >
+          一覧を見る
+        </Button>
       )}
     </div>
   );

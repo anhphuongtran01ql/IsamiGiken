@@ -151,7 +151,7 @@ function About() {
       <Row className="about__row_container">
         <Col className="about__col_container" span={24}>
           <Row className="about__row_title-top">
-            <Col lassName="about__col_title-top" span={24}>
+            <Col className="about__col_title-top" span={24}>
               <h2 className="about__row_title-heading">会社概要</h2>
             </Col>
           </Row>
@@ -175,7 +175,7 @@ function About() {
       <Row className="about__row_container">
         <Col className="about__col_container" span={24}>
           <Row className="about__row_title-top">
-            <Col lassName="about__col_title-top" span={24}>
+            <Col className="about__col_title-top" span={24}>
               <h2 className="about__row_title-heading">スタッフ紹介</h2>
             </Col>
           </Row>
@@ -190,7 +190,7 @@ function About() {
       <Row className="about__row_container">
         <Col className="about__col_container" span={24}>
           <Row className="about__row_title-top">
-            <Col lassName="about__col_title-top" span={24}>
+            <Col className="about__col_title-top" span={24}>
               <h2 className="about__row_title-heading">スタッフ紹介</h2>
             </Col>
           </Row>

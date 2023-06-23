@@ -5,6 +5,7 @@ import MobileNavbar from "./mobileNavbar";
 import logo from "../../assets/Images/common/header-logo.png";
 import mail_icon from "../../assets/Images/common/header-mail.png";
 import { Link, useNavigate } from "react-router-dom";
+import { handleClickToTop } from "../ScrollToTop/ScrollToTop";
 
 const items = [
   {
@@ -34,6 +35,8 @@ function HeaderComponent() {
   const [isMobile, setIsMobile] = useState(false);
 
   const navigate = useNavigate();
+  const redirectContact = handleClickToTop(navigate, "/contact-us");
+  const redirectHome = handleClickToTop(navigate, "/");
 
   // create an event listener
   useEffect(() => {
@@ -58,6 +61,7 @@ function HeaderComponent() {
     console.log("click ", e);
     setCurrent(e.key);
     navigate(`/${e.key}`, { replace: true });
+    window.scroll(0, 0);
   };
 
   return (
@@ -68,7 +72,7 @@ function HeaderComponent() {
         md={{ span: 8 }}
         xl={{ span: 10 }}
       >
-        <Link to="/">
+        <Link onClick={redirectHome}>
           <img className="image__logo" src={logo} alt="功美技建" />
         </Link>
       </Col>
@@ -90,7 +94,7 @@ function HeaderComponent() {
 
             <Col className="header__col_mail" md={{ span: 6 }}>
               <Link
-                to="/contact-us"
+                onClick={redirectContact}
                 style={{
                   display: "flex",
                   justifyContent: "center",

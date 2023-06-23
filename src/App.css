@@ -8,16 +8,15 @@
     height: 100%;
 }
 
-.japanese-title {
-    font-family: 'Yu Mincho', sans-serif;
-}
-
-.japanese-text {
-    font-family: 'Yu Gothic', sans-serif;
-}
-
 .container {
     padding: 5vw 2.25vw;
+}
+
+.button {
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 100%;
 }
 
 @media screen and (max-width:768px) {

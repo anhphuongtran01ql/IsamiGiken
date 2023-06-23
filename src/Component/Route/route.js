@@ -2,15 +2,12 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import TopPage from "../TopPage/topPage";
 import ContactUs from "../ContactUs/contactUs";
-import { Layout } from "antd";
 import Simulation from "../Simulation/simulation";
 import Renovation from "../Renovation/renovation";
 import About from "../About/about";
 import Recruitment from "../Recruitment/recruitment";
 import PrivatePolicy from "../Policy/policy";
 import NewsLists from "../News/newsLists";
-
-const { Content } = Layout;
 
 function RouteComponent() {
   return (

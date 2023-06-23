@@ -2,8 +2,9 @@ import { Col, Row } from "antd";
 import React from "react";
 import ImageCover from "../Header/imageCover";
 import news_mv from "../../assets/Images/news/news_mv.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./newsLists.css";
+import { handleClickToTop } from "../ScrollToTop/ScrollToTop";
 
 const infoHeader = {
   image: news_mv,
@@ -26,6 +27,9 @@ const items = [
 ];
 
 function NewsLists() {
+  const navigate = useNavigate();
+  const redirectHome = handleClickToTop(navigate, "/");
+
   return (
     <div>
       <ImageCover infoHeader={infoHeader} />
@@ -34,7 +38,7 @@ function NewsLists() {
           <Row key={index}>
             <Col span={24} className="news-lists__span_group">
               <p className="news-lists__span_date">{item.date}</p>
-              <Link to="/" style={{ color: "black" }}>
+              <Link onClick={redirectHome} style={{ color: "black" }}>
                 <p className="new-lists__span_text">{item.text}</p>
               </Link>
             </Col>

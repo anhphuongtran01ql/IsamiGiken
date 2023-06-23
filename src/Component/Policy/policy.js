@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import privacy_policy from "../../assets/Images/privacy_policy/privacy_policy_mv.jpg";
 import "./policy.css";
+import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
+import { handleClickToTop } from "../ScrollToTop/ScrollToTop";
 
 const infoHeader = {
   image: privacy_policy,
@@ -162,6 +165,8 @@ const items = [
 ];
 
 function PrivatePolicy() {
+  const navigate = useNavigate();
+  const redirectHome = handleClickToTop(navigate, "/");
   useEffect(() => {
     document.title = "プライバシーポリシー｜功美技建";
   }, []);
@@ -176,6 +181,11 @@ function PrivatePolicy() {
             <dd>{item.content}</dd>
           </dl>
         ))}
+        <div className="button__return_wrapper">
+          <Button className="button button__return" onClick={redirectHome}>
+            ホームページへ戻る
+          </Button>
+        </div>
       </section>
     </>
   );

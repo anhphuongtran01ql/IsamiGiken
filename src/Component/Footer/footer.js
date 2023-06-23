@@ -4,12 +4,15 @@ import { Col, Layout, Row } from "antd";
 import footer_phone from "../../assets/Images/common/footer-phone.png";
 import footer_email from "../../assets/Images/common/footer-mail.png";
 import factory_name from "../../assets/Images/common/factory-name.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { handleClickToTop } from "../ScrollToTop/ScrollToTop";
 
 const { Footer } = Layout;
 
 function FooterComponent() {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
+  const redirectPolicy = handleClickToTop(navigate, "/private-policy");
 
   // create an event listener
   useEffect(() => {
@@ -134,7 +137,7 @@ function FooterComponent() {
 
           <Row className="footer__row_text">
             <Link
-              to="/private-policy"
+              onClick={redirectPolicy}
               style={{
                 color: "white",
               }}

@@ -1,5 +1,4 @@
 .privacy_policy {
-    font-family: 'Times New Roman';
     max-width: 75vw;
     margin: 0 auto;
 }
@@ -8,21 +7,21 @@
     padding: 2vw;
     margin: 0 0 1vw 0;
     background-color: #fff;
+
 }
 
 .privacy_policy dl dt {
     font-size: 1.5vw;
-    font-weight: 300;
     margin-bottom: 0.7vw;
-
+    font-weight: 400;
 }
 
 .privacy_policy dd, .privacy_policy ol>li {
     font-size: 1vw;
-    font-weight: 300;
     line-height: 2;
     color: #000;
     margin: 0;
+    font-weight: 400;
 }
 
 .privacy_policy dl dd ol {
@@ -31,6 +30,20 @@
 
 .privacy_policy p {
     margin: 0;
+}
+
+.button__return_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3.75vw;
+}
+
+.button__return_wrapper .button__return {
+    padding: 1vw 4.5vw;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    font-weight: 700;
 }
 
 
@@ -65,5 +78,18 @@
     .privacy_policy dl dd ol {
         margin: 0;
         padding-left: 5vw;
+    }
+
+    .button__return_wrapper {
+        margin-top: 0;
+    }
+
+    .button__return_wrapper .button__return {
+        margin: 5vw auto;
+        width: 80%;
+        display: block;
+        padding: 3vw 4.5vw;
+        border-radius: 6vw;
+        font-size: 3.5vw;
     }
 }

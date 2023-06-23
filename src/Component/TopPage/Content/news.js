@@ -2,7 +2,8 @@ import { Button, Col, Row } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import "./news.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { handleClickToTop } from "../../ScrollToTop/ScrollToTop";
 
 const items = [
   {
@@ -41,11 +42,13 @@ const items = [
 
 function News() {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
+  const redirectNews = handleClickToTop(navigate, "/news-lists");
 
   // create an event listener
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <769) {
+      if (window.innerWidth < 769) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -74,7 +77,7 @@ function News() {
           {isMobile ? null : (
             <Row>
               <Col span={24}>
-                <Link to="/news-lists">
+                <Link onClick={redirectNews}>
                   <Button className="news__button">
                     一覧を見る <RightOutlined className="new__button_icon" />
                   </Button>
@@ -100,18 +103,9 @@ function News() {
         {isMobile ? (
           <>
             <Col span={24}>
-              <Link to="/news-lists">
-                <Button
-                  className="news__button_mobile"
-                  //   style={{
-                  //     width: "100%",
-                  //     justifyContent: "center",
-                  //     marginTop: "2.5vw",
-                  //   }}
-                >
-                  一覧を見る <RightOutlined className="new__button_icon" />
-                </Button>
-              </Link>
+              <Button className="news__button_mobile" onClick={redirectNews}>
+                一覧を見る <RightOutlined className="new__button_icon" />
+              </Button>
             </Col>
           </>
         ) : null}
