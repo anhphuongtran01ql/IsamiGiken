@@ -1,11 +1,12 @@
 :root {
+  --background-color: #E6ECF5;
   --primary-color: #004097;
   --secondary-color: #00204c;
   --third-color: #99b3d5;
 }
 
 body {
-  background-color: #E6ECF5;
+  background-color: var(--background-color);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

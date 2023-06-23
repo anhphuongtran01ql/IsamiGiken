@@ -1,55 +1,63 @@
-.recruitment__container {
-    padding: 5vw 10vw;
+.recruitment {
+    max-width: 75vw;
+    margin: 0 auto;
 }
 
-.recruitment__row-item {
-    border-top: 1px solid #D5DAE0;
-    border-left: 1px solid #D5DAE0;
+.recruitment .ant-descriptions-view {
+    border-radius: 0;
 }
 
-.recruitment__heading, .recruitment__text {
-    border-right: 1px solid #D5DAE0;
-    height: 100%;
+.recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-view {
+    border: 1px solid #ccc;
 }
 
-.recruitment__row-item:last-child {
-    border-bottom: 1px solid #D5DAE0;
-    height: 100%;
+.recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-row {
+    border-bottom: 1px solid #ccc;
+    color: #000;
+
 }
 
-.recruitment__heading {
-    margin: 0;
-    padding: 1vw;
+.recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-row:last-child {
+    border-bottom: 0;
+}
+
+.recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label {
+    border-inline-end: 1px solid #ccc;
     font-size: 1.5vw;
-    font-weight: bold;
-    letter-spacing: 0.1vw;
-    display: flex;
-    align-items: center;
+    padding: 0.6em;
+    font-weight: 700;
+    color: #000;
+    width: 30%;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    background-color: var(--background-color);
 }
 
-.recruitment__text {
+.recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content {
+    font-size: 1.5vw;
+    padding: 0.6em;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+}
+
+.recruitment p {
     margin: 0;
-    padding: 1vw;
-    font-weight: 300;
-    letter-spacing: 0.1vw;
-    font-size: 1.3vw;
+}
+
+.recruitment br.text__mode {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
-    .recruitment__container {
-        padding: 5vw 3vw;
-    }
-
-    .recruitment__heading {
-        padding: 1.5vw;
-        font-size: 2.5vw;
-        font-weight: bold;
-    }
-
-    .recruitment__text {
+    .recruitment {
+        max-width: 100%;
         margin: 0;
-        padding: 1.5vw;
-        font-weight: 300;
-        font-size: 2.25vw;
+    }
+
+    .recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label {
+        font-size: 3.2vw;
+        width: 25%;
+    }
+
+    .recruitment .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content {
+        font-size: 3.2vw;
     }
 }
