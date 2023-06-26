@@ -1,16 +1,17 @@
-.renovation__row .renovation__col {
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10vw;
+.renovation {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 5vw 0;
 }
 
-.renovation__text {
+.renovation p {
     margin: 0;
 }
 
 @media screen and (max-width: 768px) {
-    .renovation__row .renovation__col {
-        padding: 0 3.5vw;
+    .renovation {
+        max-width: 100%;
+        margin: 0;
+        padding: 5vw 2vw;
     }
 }
