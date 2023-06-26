@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import renovation_mv from "../../assets/Images/renovation/renovation_mv.jpg";
 import "./renovation.css";
@@ -10,6 +10,10 @@ const infoHeader = {
 };
 
 function Renovation() {
+  useEffect(() => {
+    document.title = "施工事例｜功美技建";
+  }, []);
+
   return (
     <>
       <ImageCover infoHeader={infoHeader} />

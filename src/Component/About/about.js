@@ -1,5 +1,5 @@
 import { Descriptions } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import info_mv from "../../assets/Images/about/info_mv.jpg";
 
@@ -153,6 +153,10 @@ const items = [
 ];
 
 function About() {
+  useEffect(() => {
+    document.title = "会社概要｜功美技建";
+  }, []);
+
   return (
     <>
       <ImageCover infoHeader={infoHeader} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import recruit_mv from "../../assets/Images/recruit/recruit_mv.jpg";
 import { Descriptions } from "antd";
@@ -45,6 +45,10 @@ const items = [
 ];
 
 function Recruitment() {
+  useEffect(() => {
+    document.title = "採用情報｜功美技建";
+  }, []);
+
   return (
     <div>
       <ImageCover infoHeader={infoHeader} />

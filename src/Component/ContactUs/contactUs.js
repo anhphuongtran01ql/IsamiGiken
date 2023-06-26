@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contactUs.css";
 import ImageCover from "../Header/imageCover";
 import contact_mv from "../../assets/Images/contact/contact_mv.jpg";
@@ -19,6 +19,10 @@ function ContactUs() {
       message: `Send email ${type}`,
     });
   };
+
+  useEffect(() => {
+    document.title = "お問い合わせ｜功美技建";
+  }, []);
 
   const [form] = Form.useForm();
   const onFinish = async (values) => {
