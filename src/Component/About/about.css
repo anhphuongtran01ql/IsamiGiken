@@ -1,81 +1,142 @@
-.about__row_container {
-    padding: 5vw 10vw;
+.about-us {
+    max-width: 75vw;
+    margin: 0 auto;
 }
 
-h2.about__row_title-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1vw 0;
-    font-size: 1.5vw;
-    font-weight: bold;
-    margin: 0;
+.about-us .content {
+    margin-bottom: 80px;
 }
 
-.about__item_container {
-    border: 1px solid #C2C5CA;
-    padding: 1vw;
+.about-us .ant-descriptions-view {
+    border-radius: 0;
 }
 
-.about__item_heading {
-    padding: 0 1vw;
-    font-size: 1.2vw;
-    margin: 0;
-    font-weight: bold;
-}
-
-.about__item_content {
-    font-size: 1.2vw;
-    letter-spacing: 0.2vw;
-    line-height: 2vw;
-}
-
-.about__item_more-wrapper {
-    padding: 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about__item_more {
-    font-size: 1.5vw;
-    margin: 0;
-    font-weight: 400;
-}
-
-.about__item_map {
+.about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-view {
     border: 1px solid #aaa;
 }
 
-.leaflet-container a {
-    color: black;
+.about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-row {
+    border-bottom: 1px solid #aaa;
+    color: #000;
+
+}
+
+.about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-row:last-child {
+    border-bottom: 0;
+}
+
+.about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label {
+    border-inline-end: #fff;
+    font-size: 1.125vw;
+    padding: 0.75vw;
+    font-weight: 700;
+    color: #000;
+    width: 25%;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    background-color: var(--background-color);
+}
+
+.about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content {
+    padding: 0.75vw;
+    font-size: 1.125vw;
+    margin-left: 1vw;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+}
+
+.about-us p {
+    margin: 0;
+}
+
+.about-us a {
+    font-size: 1.125vw;
+    font-weight: 400;
+}
+
+.about-us h2 {
+    padding: 1vw 0;
+    font-size: 1.5vw;
+    margin: 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+}
+
+.about-us .order__list {
+    padding-left: 3.5vw;
+}
+
+.about-us ul {
+    list-style: disc;
+    color: #000;
+}
+
+.about-us li {
+    margin: 10px 0;
+}
+
+.about-us .un-order__list {
+    margin: 0 0 0 20px;
+}
+
+.about-us .text {
+    font-weight: 700;
+}
+
+.about-us br {
+    display: none;
+}
+
+.about-us .ant-descriptions-item-label span {
+    padding: 0.25vw 1.375vw;
+}
+
+.about-us .about__item_more {
+    border: 1px solid #aaa;
+}
+
+.about-us p.about__item_more {
+    font-weight: 700;
+    font-size: 24px;
+    padding: 32px 0;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-    .about__row_container {
-        padding: 3vw 2vw;
+    .about-us {
+        max-width: 100%;
+        margin: 0;
     }
 
-    h2.about__row_title-heading {
-        padding: 2vw 0;
-        font-size: 2vw;
+    .about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label {
+        font-size: 3.2vw;
+        width: 25%;
     }
 
-    .about__item_container {
-        padding: 1vw;
+    .about-us .ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content {
+        font-size: 3.2vw;
     }
 
-    .about__item_heading {
-        padding: 0 1vw;
-        font-size: 2vw;
-        font-weight: bold;
+    .about-us h2 {
+        padding: 1vw 0;
+        font-size: 4.2vw;
     }
 
-    .about__item_content {
-        font-size: 2vw;
-        letter-spacing: 0.2vw;
-        line-height: 3vw;
+    .about-us a {
+        font-size: 3.2vw;
+    }
+
+    .about-us br {
+        display: block;
+    }
+
+    .about-us .order__list {
+        padding-left: 7vw;
+    }
+
+    .about-us p.about__item_more {
+        font-size: 4vw;
+        padding: 5vw 0;
     }
 }

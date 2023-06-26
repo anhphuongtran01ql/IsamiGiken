@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Descriptions } from "antd";
 import React from "react";
 import ImageCover from "../Header/imageCover";
 import info_mv from "../../assets/Images/about/info_mv.jpg";
@@ -15,106 +15,116 @@ const infoHeader = {
 const items = [
   {
     title: "会社名",
-    content: <span>有限会社 功美技建（いさみぎけん)</span>,
+    content: "有限会社 功美技建（いさみぎけん)",
   },
   {
     title: "所在地",
     content: (
       <>
-        <p style={{ margin: 0 }}>〒560-0014</p>
-        <p style={{ margin: 0 }}>大阪府豊中市熊野町４丁目１−１８</p>
+        <p>〒560-0014</p>
+        <p>大阪府豊中市熊野町４丁目１−１８</p>
       </>
     ),
   },
   {
     title: "営業時間",
-    content: <span>09:00 ~ 17:00</span>,
+    content: "09:00 ~ 17:00",
   },
   {
     title: "休日",
-    content: <span>第２土曜日、日曜日、祝日</span>,
+    content: "第２土曜日、日曜日、祝日",
   },
   {
     title: "電話番号",
-    content: <span>06-6844-7078</span>,
+    content: <a href="tel:0668447078">06-6844-7078</a>,
   },
   {
     title: "FAX",
-    content: <span>06-6844-7088</span>,
+    content: <a href="tel:0668447078">06-6844-7078</a>,
   },
   {
     title: "代表者",
-    content: <span>西田 功介</span>,
+    content: "西田功介",
   },
   {
     title: "従業員数",
-    content: <span>５名</span>,
+    content: "５名",
   },
   {
     title: "創業",
-    content: <span>平成 7年 7月</span>,
+    content: "平成 7年 7月",
   },
   {
     title: "法人設立",
-    content: <span>平成 17年 1月</span>,
+    content: "平成 17年 1月",
   },
   {
     title: "資本金",
-    content: <span>1000万円</span>,
+    content: "1000万円",
   },
 
   {
     title: "事業内容",
     content: (
       <>
-        <p style={{ margin: 0 }}>住宅外装工事（新築・リフォーム</p>
-        <ol>
-          <li>外壁材工事</li>
-          <ul>
-            <li>
-              窯業系サイディング工事：ニチハ、クボタ松下電工外装、旭トステム、他
-            </li>
-            <li>金属サイディング工事：Kmew、アイジー工業、他</li>
-            <li>パワーボード工事：旭化成、クリオン、住友金属鉱山、他</li>
-          </ul>
-          <li>屋根材工事</li>
-          <ul>
-            <li>新生瓦工事：Kmew、ニチハ、他</li>
-            <li>和洋瓦工事：近畿セラミック、他各種瓦メーカー</li>
-          </ul>
-          <li>雨樋材工事</li>
-          <ul>
-            <li>パナソニック、セキスイ、タニタハウジングウェア、他</li>
-          </ul>
-          <li>塗装工事</li>
-          <ul>
-            <li>各種塗装工事：SK化研、アイカ工業、菊水化学工業、他</li>
-          </ul>
-          <li>シーリング工事</li>
-          <ul style={{ listStyle: "none" }}>
-            <li>シーリング全般工事：オート化学工業、サンライズ、他</li>
-          </ul>
+        住宅外装工事（新築・リフォーム
+        <ol className="order__list">
+          <li>
+            外壁材工事
+            <ul className="un-order__list">
+              <li>
+                窯業系サイディング工事：ニチハ、クボタ松下電工外装、旭トステム、他
+              </li>
+              <li>金属サイディング工事：Kmew、アイジー工業、他</li>
+              <li>パワーボード工事：旭化成、クリオン、住友金属鉱山、他</li>
+            </ul>
+          </li>
+          <li>
+            屋根材工事
+            <ul className="un-order__list">
+              <li>新生瓦工事：Kmew、ニチハ、他</li>
+              <li>和洋瓦工事：近畿セラミック、他各種瓦メーカー</li>
+            </ul>
+          </li>
+          <li>
+            雨樋材工事
+            <ul className="un-order__list">
+              <li>パナソニック、セキスイ、タニタハウジングウェア、他</li>
+            </ul>
+          </li>
+          <li>
+            塗装工事
+            <ul className="un-order__list">
+              <li>各種塗装工事：SK化研、アイカ工業、菊水化学工業、他</li>
+            </ul>
+          </li>
+          <li>
+            シーリング工事
+            <ul className="un-order__list">
+              シーリング全般工事：オート化学工業、サンライズ、他
+            </ul>
+          </li>
         </ol>
       </>
     ),
   },
   {
     title: "取引先",
-    content: <span>商社、ハウスメーカー、地場ホームビルダー・工務店</span>,
+    content: "商社、ハウスメーカー、地場ホームビルダー・工務店",
   },
   {
     title: "工事エリア",
-    content: <span>全国対応</span>,
+    content: "全国対応",
   },
   {
     title: "工事実績",
-    content: <span>年間施工棟数 350棟</span>,
+    content: "年間施工棟数 350棟",
   },
   {
     title: "資格",
     content: (
       <>
-        <ul>
+        <ul className="un-order__list">
           <li>日本窯業外装材協会 認定サイディング施工士（登録番号：GGA098）</li>
           <li>ニチハ登録施工店（登録番号：NGKー近畿−259）他</li>
           <li>ルーガ認定施工店</li>
@@ -131,14 +141,12 @@ const items = [
     title: "理念",
     content: (
       <>
-        <p style={{ fontWeight: "bold", margin: 0 }}>
-          信用づくり・良いものづくり（お客様満足の高工事品質・・・技術＋コスト
+        <p className="text">
+          信用づくり・良いものづくり
+          <br />
+          （お客様満足の高工事品質・・・技術＋コスト
         </p>
-        <p style={{ fontWeight: "bold", margin: 0 }}>
-          <span style={{ padding: "0 20px 0 0" }}>協力</span>
-          <span style={{ padding: "0 20px 0 0" }}>感謝</span>
-          <span style={{ padding: "0 20px 0 0" }}>挑戦</span>
-        </p>
+        <p className="text">協力 感謝 挑戦</p>
       </>
     ),
   },
@@ -146,62 +154,34 @@ const items = [
 
 function About() {
   return (
-    <div>
+    <>
       <ImageCover infoHeader={infoHeader} />
-      <Row className="about__row_container">
-        <Col className="about__col_container" span={24}>
-          <Row className="about__row_title-top">
-            <Col className="about__col_title-top" span={24}>
-              <h2 className="about__row_title-heading">会社概要</h2>
-            </Col>
-          </Row>
-          {items.map((item, index) => (
-            <Row className="about__item_container" key={index}>
-              <Col span={24}>
-                <Row>
-                  <Col xs={3} md={6}>
-                    <h3 className="about__item_heading">{item.title}</h3>
-                  </Col>
-                  <Col className="about__item_content" xs={21} md={18}>
-                    {item.content}
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          ))}
-        </Col>
-      </Row>
+      <section className="container about-us">
+        <div className="content">
+          <h2>会社概要</h2>
+          <Descriptions
+            bordered
+            column={{ xxl: 1, xl: 1, lg: 1, md: 1, sm: 1, xs: 1 }}
+          >
+            {items.map((item) => (
+              <Descriptions.Item key={item.id} label={item.title}>
+                {item.content}
+              </Descriptions.Item>
+            ))}
+          </Descriptions>
+        </div>
 
-      <Row className="about__row_container">
-        <Col className="about__col_container" span={24}>
-          <Row className="about__row_title-top">
-            <Col className="about__col_title-top" span={24}>
-              <h2 className="about__row_title-heading">スタッフ紹介</h2>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={24}>
-              <Map />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
+        <div className="content">
+          <h2>アクセスマップ</h2>
+          <Map />
+        </div>
 
-      <Row className="about__row_container">
-        <Col className="about__col_container" span={24}>
-          <Row className="about__row_title-top">
-            <Col className="about__col_title-top" span={24}>
-              <h2 className="about__row_title-heading">スタッフ紹介</h2>
-            </Col>
-          </Row>
-          <Row className="about__item_container">
-            <Col span={24} className="about__item_more-wrapper">
-              <p className="about__item_more">準備中</p>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </div>
+        <div className="content">
+          <h2>スタッフ紹介</h2>
+          <p className="about__item_more">準備中</p>
+        </div>
+      </section>
+    </>
   );
 }
 

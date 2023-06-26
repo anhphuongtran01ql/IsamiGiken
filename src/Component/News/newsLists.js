@@ -32,9 +32,9 @@ function NewsLists() {
     <>
       <ImageCover infoHeader={infoHeader} />
       <section className="news__lists container">
-        <ul>
+        <ul className="news-list__ul">
           {items.map((item, index) => (
-            <li key={index}>
+            <li className="news-list__li" key={index}>
               <time>{item.date}</time>
               <a href="/">{item.text}</a>
             </li>

@@ -19,7 +19,7 @@ const items = [
   {
     id: 2,
     title: "勤務時間",
-    text: ' 9:00〜17:00 <br className="text__mode">※現場の状況によります。',
+    text: " 9:00〜17:00 <br>※現場の状況によります。",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const items = [
   {
     id: 6,
     title: "給与",
-    text: '月給 : 25万円以上 <br className="text__mode">※施工管理の資格がある方は優遇あり',
+    text: "月給 : 25万円以上 <br>※施工管理の資格がある方は優遇あり",
   },
 ];
 
