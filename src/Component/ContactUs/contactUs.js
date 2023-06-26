@@ -22,17 +22,17 @@ function ContactUs() {
 
   const [form] = Form.useForm();
   const onFinish = async (values) => {
-    console.log("values: ", values);
-    openNotificationWithIcon("success");
-
-    // await axios
-    //   .post("http://localhost:8080/contact-us", values)
-    //   .then((res) => {
-    //     console.log("res", res);
-    //   })
-    //   .catch((err) => {
-    //     console.log("error", err);
-    //   });
+    // console.log("values: ", values);
+    await axios
+      .post("http://localhost:8080/contact-us", values)
+      .then((res) => {
+        openNotificationWithIcon("success");
+        console.log("res", res);
+      })
+      .catch((err) => {
+        openNotificationWithIcon("error");
+        console.log("error", err);
+      });
   };
 
   return (
