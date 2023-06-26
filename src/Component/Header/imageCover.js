@@ -5,15 +5,15 @@ function ImageCover(props) {
   const item = props.infoHeader;
 
   return (
-    <div key={item.id} className="img-cover__container">
+    <section key={item.id} className="img-cover__container">
       <img className="img-cover__image" src={item.image} alt={item.title} />
-      <div className="img-cover__text_group">
+      <div className="content__wrapper">
         <h1 className="img-cover__heading">
           {item.title}
-          <span className="img-cover__text">- {item.subTitle}</span>
+          <strong>{item.subTitle}</strong>
         </h1>
       </div>
-    </div>
+    </section>
   );
 }
 
