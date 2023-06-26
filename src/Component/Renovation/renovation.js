@@ -1,4 +1,3 @@
-import { Col, Row } from "antd";
 import React from "react";
 import ImageCover from "../Header/imageCover";
 import renovation_mv from "../../assets/Images/renovation/renovation_mv.jpg";
