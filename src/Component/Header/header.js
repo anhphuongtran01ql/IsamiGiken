@@ -66,25 +66,19 @@ function HeaderComponent() {
 
   return (
     <Row className="header__row">
-      <Col
-        className="header__col_logo"
-        sm={{ span: 12 }}
-        md={{ span: 8 }}
-        xl={{ span: 10 }}
-      >
+      <Col sm={12} md={8} xl={10}>
         <Link onClick={redirectHome}>
           <img className="image__logo" src={logo} alt="功美技建" />
         </Link>
       </Col>
 
       {isMobile ? (
-        <MobileNavbar className="header__mobile-navbar" />
+        <MobileNavbar />
       ) : (
-        <Col sm={{ span: 12 }} md={{ span: 16 }} xl={{ span: 14 }}>
+        <Col sm={12} md={16} xl={14}>
           <Row className="header__row_navbar">
-            <Col className="header__col_navbar" md={{ span: 18 }}>
+            <Col className="header__col_navbar" md={18}>
               <Menu
-                className="header__menu_navbar"
                 onClick={onClick}
                 mode="horizontal"
                 items={items}
@@ -92,17 +86,10 @@ function HeaderComponent() {
               />
             </Col>
 
-            <Col className="header__col_mail" md={{ span: 6 }}>
-              <Link
-                onClick={redirectContact}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+            <Col className="header__col_mail" md={6}>
+              <Link onClick={redirectContact}>
                 <img src={mail_icon} className="header__icon" alt="mail icon" />
-                <span className="header__text">お問い合わせはこちら</span>
+                <p className="header__text">お問い合わせはこちら</p>
               </Link>
             </Col>
           </Row>
