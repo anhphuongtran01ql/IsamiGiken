@@ -1,50 +1,41 @@
-.ig__info_group {
-    padding: 0 10vw;
-}
-
-.ig__info_text {
-    display: block;
-}
-
-.ig__info_heading {
+.content .heading {
+    display: flex;
+    align-items: baseline;
     font-size: 5vw;
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
     color: var(--primary-color);
+    line-height: 1;
+    border-bottom: 2px solid #99b3d5;
     margin: 0;
+    font-weight: 700;
 }
 
-.span__text {
+.content .heading strong {
     font-size: 2.5vw;
 }
 
-.ig__divider {
-    margin: 0 0 2vw;
-    font-size: 2px;
-    background-color: #99b3d5;
-    padding: 0.02vw 0;
+.content .info_text {
+    padding-top: 1.875vw;
+    padding-bottom: 6.25vw;
 }
 
-.ig__info_text {
-    padding: 0 2vw 6vw 0;
-
-}
-
-.ig__info_para {
+.content .info_text p {
     font-size: 1.5vw;
+    margin: 0;
+    color: #333333;
 }
-
 
 @media screen and (max-width: 768px) {
-    .ig__info_heading {
-        font-size: 9vw;
-        margin: 0;
+    .content .heading {
+        font-size: 8vw;
     }
 
-    .span__text {
-        font-size: 3.5vw;
+    .content .heading strong {
+        font-size: 4vw;
+        padding-left: 1.5vw;
     }
 
-    .ig__info_para {
-        font-size: 2.5vw;
-        letter-spacing: 0.1vw;
+    .content .info_text p {
+        font-size: 3.25vw;
     }
 }

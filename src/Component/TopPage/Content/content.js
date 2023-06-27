@@ -23,13 +23,13 @@ const renovation = {
 function ContentComponent() {
   return (
     <>
-      <section className="section_IsamiGiken">
+      <section className="section_IsamiGiken container text_container">
         <TextComponent item={igItem} />
       </section>
       <section className="section_simulation">
         <Simulation />
       </section>
-      <section className="section_renovation">
+      <section className="section_renovation container text_container">
         <TextComponent item={renovation} />
       </section>
       <section className="section_info">

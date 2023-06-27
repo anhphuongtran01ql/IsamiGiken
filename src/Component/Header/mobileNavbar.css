@@ -48,7 +48,7 @@ span.anticon.anticon-close.header__icon_close {
     align-items: center;
     justify-content: center;
     background-color: var(--secondary-color);
-
+    gap: 1vw;
 }
 
 .header__drawer .ant-drawer-header-close-only {
@@ -63,10 +63,6 @@ span.anticon.anticon-close.header__icon_close {
     flex-direction: column;
     justify-content: center;
     gap: 1.5vw;
-}
-
-.header__drawer ul {
-    height: 100%;
 }
 
 .header__drawer ul li.ant-menu-item {
