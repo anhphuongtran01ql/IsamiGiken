@@ -1,18 +1,18 @@
-.simulation__container {
-    height: 35vw;
-    margin: 5vw 0px;
-}
-
 .simulation__background {
-    position: relative;
+    width: 100%;
     height: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    filter: brightness(60%);
+    object-fit: cover;
 }
 
-img.simulation__image {
-    width: 50vw;
+.simulation__wrapper {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.8s;
+}
+
+.simulation__wrapper img {
+    width: 50vw;
 }

@@ -5,22 +5,20 @@ import simulation_image from "../../../assets/Images/top/simulation_img.png";
 
 const Simulation = () => {
   return (
-    <div className="simulation__container">
-      <div
+    <>
+      <img
         className="simulation__background"
-        style={{
-          backgroundImage: `url(
-        ${simulation_bg}
-      )`,
-        }}
-      >
+        src={simulation_bg}
+        alt="簡単料金シミュレーション"
+      />
+      <a className="simulation__wrapper" href="/simulation">
         <img
           className="simulation__image"
           src={simulation_image}
-          alt="simulation background"
+          alt="簡単料金シミュレーション"
         />
-      </div>
-    </div>
+      </a>
+    </>
   );
 };
 
