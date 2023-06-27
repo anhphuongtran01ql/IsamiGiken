@@ -1,4 +1,3 @@
-import { Col, Radio, Row } from "antd";
 import React, { useState } from "react";
 import ImageCover from "../Header/imageCover";
 import simulation_top_mv from "../../assets/Images/simulation/simulation_top_mv.jpg";

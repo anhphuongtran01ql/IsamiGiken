@@ -10,7 +10,7 @@ import slider_icon_1 from "../../../../assets/Images/top/ss_slider_icon1.png";
 import slider_icon_2 from "../../../../assets/Images/top/ss_slider_icon2.png";
 import slider_icon_3 from "../../../../assets/Images/top/ss_slider_icon3.png";
 import slider_icon_4 from "../../../../assets/Images/top/ss_slider_icon4.png";
-import renovation_bg_3 from "../../../../assets/Images/top/header-bg-3.jpg";
+import renovation_bg_3 from "../../../../assets/Images/top/header-bg-3.webp";
 import ImageComponent from "./imageComponent";
 import ImageRenovation from "./imageRenovation";
 import { useEffect, useState } from "react";

@@ -65,7 +65,7 @@ function News() {
   }, []);
 
   return (
-    <div>
+    <>
       <Row className="news__container">
         <Col xs={24} sm={24} md={6} className="new__button_heading">
           <Row>
@@ -110,7 +110,7 @@ function News() {
           </>
         ) : null}
       </Row>
-    </div>
+    </>
   );
 }
 

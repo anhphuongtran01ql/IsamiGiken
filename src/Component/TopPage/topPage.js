@@ -9,10 +9,10 @@ function TopPage() {
   }, []);
 
   return (
-    <section className="top-page__container">
+    <>
       <SliderCover />
       <ContentComponent />
-    </section>
+    </>
   );
 }
 

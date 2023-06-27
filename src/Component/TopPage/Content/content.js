@@ -22,13 +22,23 @@ const renovation = {
 
 function ContentComponent() {
   return (
-    <div className="content__container">
-      <TextComponent item={igItem} />
-      <Simulation />
-      <TextComponent item={renovation} />
-      <InfoComponent />
-      <News/>
-    </div>
+    <>
+      <section className="section_IsamiGiken">
+        <TextComponent item={igItem} />
+      </section>
+      <section className="section_simulation">
+        <Simulation />
+      </section>
+      <section className="section_renovation">
+        <TextComponent item={renovation} />
+      </section>
+      <section className="section_info">
+        <InfoComponent />
+      </section>
+      <section className="section_news">
+        <News />
+      </section>
+    </>
   );
 }
 
