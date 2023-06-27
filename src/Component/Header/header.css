@@ -11,20 +11,21 @@
 
 .header__row_navbar {
     display: flex;
-    align-items: stretch;
 }
 
 .header__row_navbar .header__col_navbar {
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 5vw 0 0 5vw;
     padding: 0.8vw 0;
 }
 
 .header__row_navbar .header__col_navbar ul {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw 0 0 5vw;
     border: none;
+    justify-content: center;
+    align-items: center;
 }
 
 img.image__logo {
@@ -63,6 +64,8 @@ p.header__text {
     font-size: 1vw;
     margin: 0 1.5vw;
     padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
