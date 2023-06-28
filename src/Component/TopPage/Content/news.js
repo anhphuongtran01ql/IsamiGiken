@@ -1,42 +1,19 @@
-import { Button, Col, Row } from "antd";
-import { RightOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import "./news.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { handleClickToTop } from "../../ScrollToTop/ScrollToTop";
 
 const items = [
   {
     id: 1,
-    date: "2022.12.01",
-    tag: "カテゴリー",
-    text: "お知らせのタイトルお知らせのタイトルお知らせのタイトルお知らせのタイトル",
+    date: "2023年04月24日",
+    text: "ニチハ株式会社様の金属製外壁材・屋根材総合カタログに掲載されました。",
   },
 
   {
     id: 2,
-    date: "2022.12.01",
-    tag: "カテゴリー",
-    text: "お知らせのタイトルお知らせのタイトルお知らせのタイトルお知らせのタイトル",
-  },
-
-  {
-    id: 3,
-    date: "2022.12.01",
-    tag: "カテゴリー",
-    text: "お知らせのタイトルお知らせのタイトルお知らせのタイトルお知らせのタイトル",
-  },
-  {
-    id: 4,
-    date: "2022.12.01",
-    tag: "カテゴリー",
-    text: "お知らせのタイトルお知らせのタイトルお知らせのタイトルお知らせのタイトル",
-  },
-  {
-    id: 5,
-    date: "2022.12.01",
-    tag: "カテゴリー",
-    text: "お知らせのタイトルお知らせのタイトルお知らせのタイトルお知らせのタイトル",
+    date: "2023年04月24日",
+    text: "サイトリニューアルのお知らせ",
   },
 ];
 
@@ -65,52 +42,34 @@ function News() {
   }, []);
 
   return (
-    <>
-      <Row className="news__container">
-        <Col xs={24} sm={24} md={6} className="new__button_heading">
-          <Row>
-            <Col span={24} className="news__text-group">
-              <h3 className="news__heading">News</h3>
-              <p className="news__text">お知らせ</p>
-            </Col>
-          </Row>
-          {isMobile ? null : (
-            <Row>
-              <Col span={24}>
-                <Link onClick={redirectNews}>
-                  <Button className="news__button">
-                    一覧を見る <RightOutlined className="new__button_icon" />
-                  </Button>
-                </Link>
-              </Col>
-            </Row>
-          )}
-        </Col>
+    <div className="news__container">
+      <div className="news__wrapper">
+        <div className="text">
+          <h3 className="heading">News</h3>
+          <p>お知らせ</p>
+        </div>
+        {isMobile ? null : (
+          <a href="/news-lists" className="btn_pc" onClick={redirectNews}>
+            一覧を見る
+          </a>
+        )}
+      </div>
 
-        <Col xs={20} sm={24} md={18}>
-          {items.map((item, index) => (
-            <Row key={index}>
-              <Col span={24} className="news__span_group">
-                <span className="news__span_date">{item.date}</span>
-                {isMobile ? null : (
-                  <span className="news__span_tag">{item.tag}</span>
-                )}
-                <span className="new__span_text">{item.text}</span>
-              </Col>
-            </Row>
-          ))}
-        </Col>
-        {isMobile ? (
-          <>
-            <Col span={24}>
-              <Button className="news__button_mobile" onClick={redirectNews}>
-                一覧を見る <RightOutlined className="new__button_icon" />
-              </Button>
-            </Col>
-          </>
-        ) : null}
-      </Row>
-    </>
+      <ul className="news__list">
+        {items.map((item, index) => (
+          <li key={index}>
+            <time>{item.date}</time>
+            <a href="/news-lists">{item.text}</a>
+          </li>
+        ))}
+      </ul>
+
+      {isMobile && (
+        <a href="/news-lists" className="btn_mobile" onClick={redirectNews}>
+          一覧を見る
+        </a>
+      )}
+    </div>
   );
 }
 

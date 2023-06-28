@@ -35,7 +35,7 @@ function ContentComponent() {
       <section className="section_info">
         <InfoComponent />
       </section>
-      <section className="section_news">
+      <section className="section_news container text_container">
         <News />
       </section>
     </>
