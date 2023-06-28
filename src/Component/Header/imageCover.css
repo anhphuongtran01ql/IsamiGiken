@@ -38,13 +38,12 @@
 .img-cover__heading strong::before {
     content: '';
     position: absolute;
-    background-color: #ffffff;
+    background-color: #fff;
     width: 1.3vw;
     height: 0.15vw;
     top: 50%;
     left: 1vw;
 }
-
 
 @media screen and (max-width: 768px) {
     .img-cover__container {

@@ -8,6 +8,12 @@
     position: relative;
 }
 
+.section_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.313vw;
+}
+
 .section_news {
     padding: 9.375vw 1.25vw;
 }
@@ -21,6 +27,14 @@
     .text_container {
         max-width: 100%;
         margin: 0;
+    }
+
+    .section_info {
+        grid-template-columns: 1fr;
+        gap: 1.313vw;
+        padding-left: 2.25vw;
+        padding-right: 2.25vw;
+        margin: 6vw 0;
     }
 
     .section_news {

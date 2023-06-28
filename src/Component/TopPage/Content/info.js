@@ -9,18 +9,21 @@ const items = [
   {
     id: 1,
     image: info_img1,
+    path: "/about",
     title: "Company",
     text: "会社概要",
   },
   {
     id: 2,
     image: info_img2,
+    path: "/about#staff",
     title: "Staff",
     text: "スタッフ紹介",
   },
   {
     id: 3,
     image: info_img3,
+    path: "/recruit",
     title: "Recruit",
     text: "採用情報",
   },
@@ -29,27 +32,17 @@ const items = [
 function InfoComponent() {
   return (
     <>
-      <div className="info__group">
-        {items &&
-          items.map((item) => (
-            <div
-              key={item.id}
-              className="info__group_bg"
-              style={{
-                backgroundImage: `url(
-            ${item.image}
-          )`,
-              }}
-            >
-              <div className="info__text_overlay">
-                <h3 className="info__text">
-                  {item.title}
-                  <span className="info__text_small">{item.text}</span>
-                </h3>
-              </div>
-            </div>
-          ))}
-      </div>
+      {items.map((item) => (
+        <a href={item.path} key={item.id}>
+          <img src={item.image} alt={item.text} />
+          <div className="text">
+            <h3>
+              {item.title}
+              <strong>{item.text}</strong>
+            </h3>
+          </div>
+        </a>
+      ))}
     </>
   );
 }

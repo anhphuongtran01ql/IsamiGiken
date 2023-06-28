@@ -180,7 +180,7 @@ function About() {
           <Map />
         </div>
 
-        <div className="content">
+        <div className="content" id="staff">
           <h2>スタッフ紹介</h2>
           <p className="about__item_more">準備中</p>
         </div>
