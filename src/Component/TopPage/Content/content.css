@@ -12,6 +12,11 @@
     padding: 9.375vw 1.25vw;
 }
 
+.section_siding {
+    position: relative;
+    margin-bottom: 9.375vw;
+}
+
 @media screen and (max-width:768px) {
     .text_container {
         max-width: 100%;

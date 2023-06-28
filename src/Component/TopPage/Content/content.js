@@ -4,6 +4,7 @@ import InfoComponent from "./info";
 import Simulation from "./simualtion";
 import TextComponent from "./textComponent";
 import News from "./news";
+import Siding from "./siding";
 
 const igItem = {
   title: "IsamiGiken",
@@ -37,6 +38,9 @@ function ContentComponent() {
       </section>
       <section className="section_news container text_container">
         <News />
+      </section>
+      <section className="section_siding">
+        <Siding />
       </section>
     </>
   );
