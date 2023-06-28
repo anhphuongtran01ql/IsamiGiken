@@ -14,7 +14,6 @@ import renovation_bg from "../../../../assets/Images/top/renovation_bg.png";
 import ImageComponent from "./imageComponent";
 import ImageRenovation from "./imageRenovation";
 import { useEffect, useState } from "react";
-import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { handleClickToTop } from "../../../ScrollToTop/ScrollToTop";
 
@@ -70,7 +69,6 @@ const settings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   dots: false,
-  infinite: true,
   responsive: [
     {
       breakpoint: 769,
@@ -86,12 +84,13 @@ const settingsRenovation = {
   slidesToShow: 2,
   slidesToScroll: 1,
   dots: false,
-  infinite: true,
 };
 
 function SliderContent(props) {
   const title = props.title;
   const [isMobile, setIsMobile] = useState(false);
+  const [current, setCurrent] = useState(0);
+
   const navigate = useNavigate();
   const redirectRenovation = handleClickToTop(navigate, "/renovation");
 
@@ -114,12 +113,16 @@ function SliderContent(props) {
     };
   }, []);
 
+  // useEffect(() => {}, []);
+
   const handlePrevious = () => {
     sliderRef.slickPrev();
+    setCurrent(current - 1);
   };
 
   const handleNext = () => {
     sliderRef.slickNext();
+    setCurrent(current + 1);
   };
 
   // Reference to the Slider component
@@ -141,12 +144,17 @@ function SliderContent(props) {
           </Slider>
           <div className="slider-content__button_group">
             <button
-              className="slider-content__button button-left"
+              className="slider-content__button"
               onClick={handlePrevious}
+              disabled={current === 0}
             >
               <LeftOutlined className="slider-content__button_icon" />
             </button>
-            <button className="slider-content__button" onClick={handleNext}>
+            <button
+              className="slider-content__button"
+              onClick={handleNext}
+              disabled={current === slidesData.length - 2}
+            >
               <RightOutlined className="slider-content__button_icon" />
             </button>
           </div>
@@ -169,10 +177,15 @@ function SliderContent(props) {
             <button
               className="slider-content__button button-left"
               onClick={handlePrevious}
+              disabled={current === 0}
             >
               <LeftOutlined className="slider-content__button_icon" />
             </button>
-            <button className="slider-content__button" onClick={handleNext}>
+            <button
+              className="slider-content__button"
+              onClick={handleNext}
+              disabled={current === renovations.length - 2}
+            >
               <RightOutlined className="slider-content__button_icon" />
             </button>
           </div>
