@@ -7,12 +7,14 @@ function App() {
   return (
     <div className="App">
       <header>
-        <HeaderComponent className="top-page__header" />
+        <HeaderComponent />
       </header>
       <main>
         <RouteComponent />
       </main>
-      <FooterComponent className="top-page__footer" />
+      <footer>
+        <FooterComponent/>
+      </footer>
     </div>
   );
 }

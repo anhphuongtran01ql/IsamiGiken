@@ -35,6 +35,11 @@
 }
 
 @media (max-width: 768px) {
+    .img-component__container {
+        margin-right: 0;
+        padding: 0 10vw;
+    }
+
     .img-component__icon {
         height: 17vw;
     }

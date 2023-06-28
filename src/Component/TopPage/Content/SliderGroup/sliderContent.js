@@ -113,7 +113,11 @@ function SliderContent(props) {
     };
   }, []);
 
-  // useEffect(() => {}, []);
+  useEffect(() => {
+    if (current > slidesData.length) {
+      setCurrent(slidesData.length - 2);
+    }
+  }, [current]);
 
   const handlePrevious = () => {
     sliderRef.slickPrev();
@@ -133,7 +137,6 @@ function SliderContent(props) {
       {title === "IsamiGiken" ? (
         <>
           <Slider
-            className="slider-content__slider"
             {...settings}
             ref={(slider) => (sliderRef = slider)}
             arrows={false}
@@ -153,7 +156,10 @@ function SliderContent(props) {
             <button
               className="slider-content__button"
               onClick={handleNext}
-              disabled={current === slidesData.length - 2}
+              disabled={
+                (isMobile === false && current === slidesData.length - 2) ||
+                (isMobile && current === slidesData.length)
+              }
             >
               <RightOutlined className="slider-content__button_icon" />
             </button>
@@ -164,7 +170,6 @@ function SliderContent(props) {
       {title === "Renovation" && isMobile === false && (
         <>
           <Slider
-            className="slider-content__slider"
             {...settingsRenovation}
             ref={(slider) => (sliderRef = slider)}
             arrows={false}
