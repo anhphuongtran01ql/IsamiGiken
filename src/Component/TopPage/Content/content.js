@@ -17,8 +17,8 @@ const renovation = {
   title: "Renovation",
   text: "施工事例",
   paragraph1:
-    "施工事例についてのテキスト施工事例についてのテキスト施工事例についてのテキスト施",
-  paragraph2: "工事例についてのテキスト",
+    "お客様の要望に合わせた柔軟な対応が強み！",
+  paragraph2: "当社の施工事例を取りまとめました",
 };
 
 function ContentComponent() {

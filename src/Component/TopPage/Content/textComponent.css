@@ -21,6 +21,7 @@
 
 .content .info_text p {
     font-size: 1.5vw;
+    line-height: 2.25vw;
     margin: 0;
     color: #333333;
 }
@@ -37,5 +38,6 @@
 
     .content .info_text p {
         font-size: 3.25vw;
+        line-height: 4vw;
     }
 }

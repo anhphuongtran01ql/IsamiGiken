@@ -8,17 +8,30 @@
     justify-content: space-between;
 }
 
-.slider-content__renovation_button-mobile {
-    background-color: var(--primary-color);
-    color: white;
+.slider-content__container .renovation_button-mobile {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
     width: 100%;
+    margin: 0 auto;
     padding: 3vw 0;
-    border-radius: 2vw;
-    font-size: 2vw;
-    font-weight: bold;
+}
+
+.slider-content__container .renovation_button-mobile a {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+    padding: 3vw 4.5vw;
+    border-radius: 6vw;
+    font-size: 3.5vw;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.slider-content__container .slick-slider .slick-track,
+.slider-content__container .slick-slider .slick-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.2vw;
 }
 
 /* button prev and next */

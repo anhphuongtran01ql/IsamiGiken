@@ -10,7 +10,7 @@ import slider_icon_1 from "../../../../assets/Images/top/ss_slider_icon1.png";
 import slider_icon_2 from "../../../../assets/Images/top/ss_slider_icon2.png";
 import slider_icon_3 from "../../../../assets/Images/top/ss_slider_icon3.png";
 import slider_icon_4 from "../../../../assets/Images/top/ss_slider_icon4.png";
-import renovation_bg_3 from "../../../../assets/Images/top/header-bg-3.webp";
+import renovation_bg from "../../../../assets/Images/top/renovation_bg.png";
 import ImageComponent from "./imageComponent";
 import ImageRenovation from "./imageRenovation";
 import { useEffect, useState } from "react";
@@ -48,19 +48,19 @@ const slidesData = [
 const renovations = [
   {
     id: 1,
-    src: renovation_bg_3,
+    src: renovation_bg,
     label: ["該当地域", "工事概要", "施工費用"],
     describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
   },
   {
     id: 2,
-    src: renovation_bg_3,
+    src: renovation_bg,
     label: ["該当地域", "工事概要", "施工費用"],
     describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
   },
   {
     id: 3,
-    src: renovation_bg_3,
+    src: renovation_bg,
     label: ["該当地域", "工事概要", "施工費用"],
     describe: ["大阪府", "屋根葺き替え工事", "100 万円"],
   },
@@ -180,12 +180,11 @@ function SliderContent(props) {
       )}
 
       {title === "Renovation" && isMobile === true && (
-        <Button
-          className="slider-content__renovation_button-mobile"
-          onClick={redirectRenovation}
-        >
-          一覧を見る
-        </Button>
+        <div className="renovation_button-mobile">
+          <a href="/renovation" onClick={redirectRenovation}>
+            一覧を見る
+          </a>
+        </div>
       )}
     </div>
   );
