@@ -1,3 +1,6 @@
+import React from "react";
+import SimulationList from "./simulationList";
+
 const SimulationComponent = ({ item }) => {
   return (
     <>
