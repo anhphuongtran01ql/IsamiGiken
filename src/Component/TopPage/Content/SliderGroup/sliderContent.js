@@ -104,12 +104,6 @@ const renovations = [
   },
 ];
 
-const settingsRenovation = {
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  dots: false,
-};
-
 function SliderContent(props) {
   const settings = {
     slidesToShow: 3,
@@ -130,14 +124,21 @@ function SliderContent(props) {
     },
   };
 
+  const settingsRenovation = {
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    beforeChange: (current, next) => {
+      setCanGoPrev(next > 0);
+      setCanGoNext(next < 1);
+    },
+  };
+
   const title = props.title;
   const [isMobile, setIsMobile] = useState(false);
 
   const [canGoPrev, setCanGoPrev] = useState(false);
   const [canGoNext, setCanGoNext] = useState(true);
-
-  const [current, setCurrent] = useState(0);
-  console.log("current: ", current);
 
   const navigate = useNavigate();
   const redirectRenovation = handleClickToTop(navigate, "/renovation");
@@ -163,12 +164,10 @@ function SliderContent(props) {
 
   const handlePrevious = () => {
     canGoPrev && sliderRef.slickPrev();
-    setCurrent(current - 1);
   };
 
   const handleNext = () => {
     canGoNext && sliderRef.slickNext();
-    setCurrent(current + 1);
   };
 
   // Reference to the Slider component
@@ -226,14 +225,14 @@ function SliderContent(props) {
             <button
               className="slider-content__button button-left"
               onClick={handlePrevious}
-              disabled={current === 0}
+              disabled={!canGoPrev}
             >
               <LeftOutlined className="slider-content__button_icon" />
             </button>
             <button
               className="slider-content__button"
               onClick={handleNext}
-              disabled={current === renovations.length - 2}
+              disabled={!canGoNext}
             >
               <RightOutlined className="slider-content__button_icon" />
             </button>
