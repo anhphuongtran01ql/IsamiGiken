@@ -7,12 +7,19 @@
     background-color: #fff;
 }
 
+.simulation__item_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
 .simulation__item {
     padding: 5vw 2vw;
     font-size: 1.7vw;
 }
 
 .simulation__radio_group label.simulation__item {
+
     border: 2px solid #aaa;
     border-radius: 0;
     display: flex;
@@ -57,6 +64,10 @@
     .simulation__item {
         padding: 7vw 2vw;
         font-size: 4vw;
+    }
+
+    .simulation__radio_group label.simulation__item {
+        padding: 8vw;
     }
 
 }

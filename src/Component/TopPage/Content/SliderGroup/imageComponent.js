@@ -18,7 +18,7 @@ function ImageComponent(props) {
               src={item.label}
               alt={`Slide ${item.id}`}
             />
-            <h2 className="img-component__heading">{item.title}</h2>
+            <p>{item.title}</p>
           </div>
         </div>
       )}

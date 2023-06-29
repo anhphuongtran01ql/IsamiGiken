@@ -16,8 +16,7 @@ const igItem = {
 const renovation = {
   title: "Renovation",
   text: "施工事例",
-  paragraph1:
-    "お客様の要望に合わせた柔軟な対応が強み！",
+  paragraph1: "お客様の要望に合わせた柔軟な対応が強み！",
   paragraph2: "当社の施工事例を取りまとめました",
 };
 

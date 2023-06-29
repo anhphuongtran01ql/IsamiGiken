@@ -29,6 +29,10 @@
     gap: 0.2vw;
 }
 
+.slider-content__container .slick-list {
+    margin-inline: -7vw;
+}
+
 /* button prev and next */
 .slider-content__button_group {
     text-align: center;
@@ -36,7 +40,7 @@
     justify-content: center;
     align-items: center;
     gap: 10vw;
-    margin-top: 3vw;
+    margin-top: 2.5vw;
     opacity: 0.6;
 }
 
@@ -63,5 +67,14 @@ button.slider-content__button:disabled {
 
     .slider-content__button_icon {
         font-size: 6vw;
+    }
+
+    .slider-content__container .slick-list {
+        margin-inline: 0;
+    }
+
+    .slider-content__button_group {
+        gap: 7vw;
+        margin-top: 5vw;
     }
 }

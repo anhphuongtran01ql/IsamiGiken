@@ -1,9 +1,9 @@
 import { Radio } from "antd";
 import React from "react";
 
-const SimulationItem = ({ item, onAddChild, style }) => {
+const SimulationItem = ({ item, onAddChild }) => {
   return (
-    <div style={{ ...style }}>
+    <div >
       <h2 className="simulation__heading">{item.title}</h2>
       <Radio.Group
         buttonStyle="solid"

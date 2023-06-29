@@ -6,7 +6,7 @@ import SimulationResult from "./simulationResult";
 function SimulationList({ item }) {
   const [listQuestion, setListQuestion] = useState([]);
 
-  const ref = useRef(null);
+  const listRef = useRef(null);
 
   const onAddChild = (child) => {
     let filterNewQuestion = [];
@@ -15,31 +15,30 @@ function SimulationList({ item }) {
         item.question !== child.question && item.question <= child.question
     );
     setListQuestion([...filterNewQuestion, child]);
-
-    // setTimeout(() => {
-    //   const currentIndex = listQuestion.indexOf(child);
-    //   if (currentIndex >= 0 && currentIndex < listQuestion.length - 1) {
-    //     const nextQuestion = listQuestion[currentIndex + 1];
-    //     const nextQuestionRef = nextQuestion.ref;
-
-    //     if (nextQuestionRef && nextQuestionRef.current) {
-    //       nextQuestionRef.current.scrollIntoView({ behavior: "smooth" });
-    //     }
-    //   }
-    // }, 500);
+    // 👇 Scroll to the last element in the list
+    setTimeout(() => {
+      listRef.current?.lastElementChild?.scrollIntoView({ behavior: "smooth" });
+    }, 500);
   };
 
   return (
     <>
       <SimulationItem onAddChild={onAddChild} item={item} />
-      {listQuestion.map((question, index) => {
-        if (question.options.length <= 0) {
-          return <SimulationResult />;
-        }
-        return (
-          <SimulationItem key={index} onAddChild={onAddChild} item={question} />
-        );
-      })}
+      <div ref={listRef} className="simulation__item_wrapper">
+        {listQuestion.map((question, index) => {
+          if (question.options.length <= 0) {
+            return <SimulationResult />;
+          }
+          return (
+            <SimulationItem
+              key={index}
+              onAddChild={onAddChild}
+              item={question}
+            />
+          );
+        })}
+      </div>
+      {/* <div ref={ref}>EEEEE</div> */}
     </>
   );
 }
