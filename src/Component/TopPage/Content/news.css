@@ -69,6 +69,10 @@ ul.news__list {
     font-weight: 700;
 }
 
+.news__list li a:hover {
+    text-decoration: underline;
+}
+
 .news__container .btn_mobile {
     background-color: var(--primary-color);
     color: #fff;

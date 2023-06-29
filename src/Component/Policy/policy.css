@@ -32,6 +32,10 @@
     margin: 0;
 }
 
+.privacy__policy a {
+    font-weight: 400;
+}
+
 .button__return_wrapper {
     display: flex;
     justify-content: center;

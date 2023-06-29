@@ -16,7 +16,7 @@ const items = [
   {
     id: 2,
     image: info_img2,
-    path: "/about#staff",
+    path: "/about",
     title: "Staff",
     text: "スタッフ紹介",
   },

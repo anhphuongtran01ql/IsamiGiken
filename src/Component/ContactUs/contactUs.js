@@ -29,7 +29,6 @@ function ContactUs() {
 
   const handleZipCodeChange = (event) => {
     const newZipCode = event.target.value.replace("-", "");
-    console.log("value new", newZipCode);
 
     if (newZipCode.length === 7) {
       setLoading(true);
@@ -37,7 +36,6 @@ function ContactUs() {
         .get(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${newZipCode}`)
         .then((response) => {
           const result = response.data.results[0];
-          console.log("response", result);
           if (result) {
             form.setFieldsValue({
               address:
@@ -294,7 +292,7 @@ function ContactUs() {
               className="button__submit"
               type="primary"
               htmlType="submit"
-              loading={loading}
+              // loading={loading}
             >
               入力した内容を確認する
             </Button>
