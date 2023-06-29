@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { handleClickToTop } from "../../../ScrollToTop/ScrollToTop";
 
-const slidesData = [
+const slidesDataMobile = [
   {
     id: 1,
     src: slider_bg_1,
@@ -44,6 +44,45 @@ const slidesData = [
   },
 ];
 
+const slidesDataPC = [
+  {
+    id: 0,
+    src: null,
+    title: "",
+    label: null,
+  },
+  {
+    id: 1,
+    src: slider_bg_1,
+    title: "古い外壁を新しくしたい",
+    label: slider_icon_1,
+  },
+  {
+    id: 2,
+    src: slider_bg_2,
+    title: "屋根の劣化が気になる",
+    label: slider_icon_2,
+  },
+  {
+    id: 3,
+    src: slider_bg_3,
+    title: "納屋の壁を綺麗にしたい",
+    label: slider_icon_3,
+  },
+  {
+    id: 4,
+    src: slider_bg_4,
+    title: "ベランダで水漏れがある",
+    label: slider_icon_4,
+  },
+  {
+    id: 5,
+    src: null,
+    title: "",
+    label: null,
+  },
+];
+
 const renovations = [
   {
     id: 1,
@@ -65,21 +104,6 @@ const renovations = [
   },
 ];
 
-const settings = {
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  dots: false,
-  responsive: [
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 const settingsRenovation = {
   slidesToShow: 2,
   slidesToScroll: 1,
@@ -87,9 +111,33 @@ const settingsRenovation = {
 };
 
 function SliderContent(props) {
+  const settings = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    beforeChange: (current, next) => {
+      setCanGoPrev(next > 0);
+      setCanGoNext(next < 3);
+    },
+  };
+
   const title = props.title;
   const [isMobile, setIsMobile] = useState(false);
+
+  const [canGoPrev, setCanGoPrev] = useState(false);
+  const [canGoNext, setCanGoNext] = useState(true);
+
   const [current, setCurrent] = useState(0);
+  console.log("current: ", current);
 
   const navigate = useNavigate();
   const redirectRenovation = handleClickToTop(navigate, "/renovation");
@@ -113,19 +161,13 @@ function SliderContent(props) {
     };
   }, []);
 
-  useEffect(() => {
-    if (current > slidesData.length) {
-      setCurrent(slidesData.length - 2);
-    }
-  }, [current]);
-
   const handlePrevious = () => {
-    sliderRef.slickPrev();
+    canGoPrev && sliderRef.slickPrev();
     setCurrent(current - 1);
   };
 
   const handleNext = () => {
-    sliderRef.slickNext();
+    canGoNext && sliderRef.slickNext();
     setCurrent(current + 1);
   };
 
@@ -141,25 +183,27 @@ function SliderContent(props) {
             ref={(slider) => (sliderRef = slider)}
             arrows={false}
           >
-            {slidesData.map((slide, index) => (
-              <ImageComponent items={slide} key={index} />
-            ))}
+            {isMobile === false &&
+              slidesDataPC.map((slide, index) => (
+                <ImageComponent items={slide} key={index} />
+              ))}
+            {isMobile === true &&
+              slidesDataMobile.map((slide, index) => (
+                <ImageComponent items={slide} key={index} />
+              ))}
           </Slider>
           <div className="slider-content__button_group">
             <button
               className="slider-content__button"
               onClick={handlePrevious}
-              disabled={current === 0}
+              disabled={!canGoPrev}
             >
               <LeftOutlined className="slider-content__button_icon" />
             </button>
             <button
               className="slider-content__button"
               onClick={handleNext}
-              disabled={
-                (isMobile === false && current === slidesData.length - 2) ||
-                (isMobile && current === slidesData.length)
-              }
+              disabled={!canGoNext}
             >
               <RightOutlined className="slider-content__button_icon" />
             </button>
