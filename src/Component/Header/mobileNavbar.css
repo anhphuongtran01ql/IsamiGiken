@@ -41,6 +41,10 @@ span.anticon.anticon-close.header__icon_close {
     color: white;
 }
 
+.header__drawer li.ant-menu-item.ant-menu-item-selected {
+    display: none;
+}
+
 .header__drawer .ant-drawer-body {
     padding: 0;
     display: flex;
@@ -63,7 +67,7 @@ span.anticon.anticon-close.header__icon_close {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5vw;
+    gap: 3.5vw;
 }
 
 .header__drawer ul li.ant-menu-item {
