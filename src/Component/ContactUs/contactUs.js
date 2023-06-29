@@ -28,7 +28,8 @@ function ContactUs() {
   const onFinish = async (values) => {
     // console.log("values: ", values);
     await axios
-      .post("http://localhost:8080/contact-us", values)
+      // .post("http://localhost:8080/api/contact-us", values)
+      .post("http://tran-anh-phuong.gattscom.com/api/contact-us", values)
       .then((res) => {
         openNotificationWithIcon("success");
         console.log("res", res);

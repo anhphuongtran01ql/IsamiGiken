@@ -1,29 +1,23 @@
 import { Radio } from "antd";
-import React, { useState } from "react";
-import "./simulationItem.css";
+import React from "react";
 
-function SimulationItem({ item }) {
+const SimulationItem = ({item, onAddChild, style}) => {
   return (
-    <>
+    <div style={{...style}}>
       <h2 className="simulation__heading">{item.title}</h2>
       <Radio.Group
         buttonStyle="solid"
         className="simulation__radio_group"
-        // onChange={handleSelect}
-        // value={selectedValue}
+        onChange={(e) => onAddChild(e.target.value)}
       >
-        <Radio.Button className="simulation__item" value="a">
-          {item.option1}
-        </Radio.Button>
-        <Radio.Button className="simulation__item" value="b">
-          {item.option2}
-        </Radio.Button>
-        <Radio.Button className="simulation__item" value="c">
-          {item.option3}
-        </Radio.Button>
+        {item.options.map((option, index) => (
+          <Radio.Button className="simulation__item" value={option}>
+            {option.value}
+          </Radio.Button>
+        ))}
       </Radio.Group>
-    </>
+    </div>
   );
-}
+};
 
 export default SimulationItem;

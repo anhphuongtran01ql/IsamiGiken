@@ -1,5 +1,11 @@
+section.container.simulation {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
 .simulation {
-    width: 60vw;
+    width: 65vw;
     margin: 0 auto;
 }
 
