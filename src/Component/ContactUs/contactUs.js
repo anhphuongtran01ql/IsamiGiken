@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./contactUs.css";
 import ImageCover from "../Header/imageCover";
 import contact_mv from "../../assets/Images/contact/contact_mv.jpg";
 import axios from "axios";
 
-import { Button, Col, Form, Input, Row, notification } from "antd";
+import { Button, Col, Form, Input, Row, message, notification } from "antd";
 
 const infoHeader = {
   image: contact_mv,
@@ -25,8 +25,45 @@ function ContactUs() {
   }, []);
 
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
+
+  const handleZipCodeChange = (event) => {
+    const newZipCode = event.target.value.replace("-", "");
+    console.log("value new", newZipCode);
+
+    if (newZipCode.length === 7) {
+      setLoading(true);
+      axios
+        .get(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${newZipCode}`)
+        .then((response) => {
+          const result = response.data.results[0];
+          console.log("response", result);
+          if (result) {
+            form.setFieldsValue({
+              address:
+                result?.address1 +
+                " " +
+                result?.address2 +
+                " " +
+                result?.address3,
+            });
+          } else {
+            form.setFieldsValue({ address: "" });
+            message.error("Invalid ZIP code");
+          }
+          setLoading(false);
+        })
+        .catch((error) => {
+          form.setFieldsValue({ address: "" });
+          message.error("Invalid ZIP code");
+          setLoading(false);
+        });
+    } else {
+      form.setFieldsValue({ address: "" });
+    }
+  };
+
   const onFinish = async (values) => {
-    // console.log("values: ", values);
     await axios
       // .post("http://localhost:8080/api/contact-us", values)
       .post("http://tran-anh-phuong.gattscom.com/api/contact-us", values)
@@ -75,6 +112,7 @@ function ContactUs() {
                     rules={[
                       {
                         required: true,
+                        message: "名前は必ず指定してください。",
                       },
                     ]}
                   >
@@ -109,12 +147,15 @@ function ContactUs() {
                         rules={[
                           {
                             required: true,
+                            // message: "郵便番号は必ず指定してください。",
+                            message: "Required!",
                           },
                         ]}
                       >
                         <Input
                           className="contact-us__input contact-us__input_zipCode"
                           placeholder="〒 166-0002"
+                          onChange={handleZipCodeChange}
                         />
                       </Form.Item>
                     </Col>
@@ -126,6 +167,7 @@ function ContactUs() {
                         rules={[
                           {
                             required: true,
+                            message: "住所は必ず指定してください。",
                           },
                         ]}
                       >
@@ -160,9 +202,11 @@ function ContactUs() {
                     rules={[
                       {
                         type: "email",
+                        message: "Please enter a valid email address!",
                       },
                       {
                         required: true,
+                        message: "メールアドレスは必ず指定してください。",
                       },
                     ]}
                   >
@@ -195,6 +239,7 @@ function ContactUs() {
                     rules={[
                       {
                         required: true,
+                        message: "電話番号は必ず指定してください。",
                       },
                     ]}
                   >
@@ -227,6 +272,7 @@ function ContactUs() {
                     rules={[
                       {
                         required: true,
+                        message: "お問合わせ内容は必ず指定してください。",
                       },
                     ]}
                   >
@@ -244,7 +290,12 @@ function ContactUs() {
           </Row>
 
           <Form.Item style={{ display: "block", textAlign: "center" }}>
-            <Button className="button__submit" type="primary" htmlType="submit">
+            <Button
+              className="button__submit"
+              type="primary"
+              htmlType="submit"
+              loading={loading}
+            >
               入力した内容を確認する
             </Button>
           </Form.Item>
