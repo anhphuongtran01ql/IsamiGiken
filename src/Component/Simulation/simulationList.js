@@ -17,7 +17,14 @@ function SimulationList({ item }) {
     setListQuestion([...filterNewQuestion, child]);
     // 👇 Scroll to the last element in the list
     setTimeout(() => {
-      listRef.current?.lastElementChild?.scrollIntoView({ behavior: "smooth" });
+      const element = listRef.current.lastElementChild;
+      const y = element.getBoundingClientRect().top + window.pageYOffset - 70;
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+      window.scrollTo({ top: y, behavior: "smooth" });
     }, 500);
   };
 

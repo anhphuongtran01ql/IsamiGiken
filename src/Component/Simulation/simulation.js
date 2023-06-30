@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImageCover from "../Header/imageCover";
 import simulation_top_mv from "../../assets/Images/simulation/simulation_top_mv.jpg";
 import "./simulation.css";
@@ -627,6 +627,10 @@ const items = {
 };
 
 function Simulation() {
+  useEffect(() => {
+    document.title = "料金シミュレーション｜功美技建";
+  }, []);
+
   return (
     <>
       <ImageCover infoHeader={infoHeader} />

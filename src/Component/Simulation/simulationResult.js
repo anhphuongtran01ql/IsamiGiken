@@ -9,8 +9,15 @@ function SimulationResult() {
     setResultUI(true);
 
     setTimeout(() => {
-      UIRef.current.scrollIntoView({ behavior: "smooth" });
-    }, 700);
+      const element = UIRef.current;
+      const y = element.getBoundingClientRect().top + window.pageYOffset - 70;
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 500);
   };
 
   return (
