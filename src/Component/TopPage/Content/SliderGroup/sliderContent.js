@@ -175,78 +175,82 @@ function SliderContent(props) {
 
   return (
     <div className="slider-content__container">
-      {title === "IsamiGiken" ? (
-        <>
-          <Slider
-            {...settings}
-            ref={(slider) => (sliderRef = slider)}
-            arrows={false}
-          >
-            {isMobile === false &&
-              slidesDataPC.map((slide, index) => (
-                <ImageComponent items={slide} key={index} />
-              ))}
-            {isMobile === true &&
-              slidesDataMobile.map((slide, index) => (
-                <ImageComponent items={slide} key={index} />
-              ))}
-          </Slider>
-          <div className="slider-content__button_group">
-            <button
-              className="slider-content__button"
-              onClick={handlePrevious}
-              disabled={!canGoPrev}
+      <div className="IG-slider__container">
+        {title === "IsamiGiken" ? (
+          <>
+            <Slider
+              {...settings}
+              ref={(slider) => (sliderRef = slider)}
+              arrows={false}
             >
-              <LeftOutlined className="slider-content__button_icon" />
-            </button>
-            <button
-              className="slider-content__button"
-              onClick={handleNext}
-              disabled={!canGoNext}
-            >
-              <RightOutlined className="slider-content__button_icon" />
-            </button>
-          </div>
-        </>
-      ) : null}
+              {isMobile === false &&
+                slidesDataPC.map((slide, index) => (
+                  <ImageComponent items={slide} key={index} />
+                ))}
+              {isMobile === true &&
+                slidesDataMobile.map((slide, index) => (
+                  <ImageComponent items={slide} key={index} />
+                ))}
+            </Slider>
+            <div className="slider-content__button_group">
+              <button
+                className="slider-content__button"
+                onClick={handlePrevious}
+                disabled={!canGoPrev}
+              >
+                <LeftOutlined className="slider-content__button_icon" />
+              </button>
+              <button
+                className="slider-content__button"
+                onClick={handleNext}
+                disabled={!canGoNext}
+              >
+                <RightOutlined className="slider-content__button_icon" />
+              </button>
+            </div>
+          </>
+        ) : null}
+      </div>
 
-      {title === "Renovation" && isMobile === false && (
-        <>
-          <Slider
-            {...settingsRenovation}
-            ref={(slider) => (sliderRef = slider)}
-            arrows={false}
-          >
-            {renovations.map((renovation, index) => (
-              <ImageRenovation renovations={renovation} key={index} />
-            ))}
-          </Slider>
-          <div className="slider-content__button_group">
-            <button
-              className="slider-content__button button-left"
-              onClick={handlePrevious}
-              disabled={!canGoPrev}
+      <div className="renovation-slider__container">
+        {title === "Renovation" && isMobile === false && (
+          <>
+            <Slider
+              {...settingsRenovation}
+              ref={(slider) => (sliderRef = slider)}
+              arrows={false}
             >
-              <LeftOutlined className="slider-content__button_icon" />
-            </button>
-            <button
-              className="slider-content__button"
-              onClick={handleNext}
-              disabled={!canGoNext}
-            >
-              <RightOutlined className="slider-content__button_icon" />
-            </button>
-          </div>
-        </>
-      )}
+              {renovations.map((renovation, index) => (
+                <ImageRenovation renovations={renovation} key={index} />
+              ))}
+            </Slider>
+            <div className="slider-content__button_group">
+              <button
+                className="slider-content__button button-left"
+                onClick={handlePrevious}
+                disabled={!canGoPrev}
+              >
+                <LeftOutlined className="slider-content__button_icon" />
+              </button>
+              <button
+                className="slider-content__button"
+                onClick={handleNext}
+                disabled={!canGoNext}
+              >
+                <RightOutlined className="slider-content__button_icon" />
+              </button>
+            </div>
+          </>
+        )}
 
-      {title === "Renovation" && isMobile === true && (
-        <div className="renovation_button-mobile">
-          <a href="/renovation" onClick={redirectRenovation}>
-            一覧を見る
-          </a>
-        </div>
-      )}
+        {title === "Renovation" && isMobile === true && (
+          <div className="renovation_button-mobile">
+            <a href="/renovation" onClick={redirectRenovation}>
+              一覧を見る
+            </a>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

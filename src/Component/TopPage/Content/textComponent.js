@@ -9,7 +9,7 @@ function TextComponent(props) {
     <>
       <div className="content">
         <h2 className="heading">
-          {item.title} <strong className="span__text">- {item.text}</strong>
+          {item.title} <strong className="span__text">{item.text}</strong>
         </h2>
         <div className="info_text">
           <p>{item.paragraph1}</p>

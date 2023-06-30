@@ -23,14 +23,14 @@
     color: #fff;
 }
 
-.slider-content__container .slick-slider .slick-track,
-.slider-content__container .slick-slider .slick-list {
+.slider-content__container .renovation-slider__container .slick-slider .slick-track,
+.slider-content__container .renovation-slider__container .slick-slider .slick-list {
     display: flex;
     gap: 0.2vw;
 }
 
-.slider-content__container .slick-list {
-    margin-inline: -7vw;
+.slider-content__container .IG-slider__container .slick-list {
+    margin-inline: -6.5vw;
 }
 
 /* button prev and next */
